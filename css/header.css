@@ -32,11 +32,15 @@
 }
 
 .cta-button {
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 .cta-button:first-child {
