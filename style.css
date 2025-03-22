@@ -7,41 +7,13 @@ body {
     justify-content: center;
     align-items: center;
 
-    overflow: hidden;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
 
-    background: linear-gradient(120deg, #D81E5B, #331832);
-    
+h1 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-}
 
-main {
-    width: 480px;
-    height: 64vh;
-
-    background-color: #F1DAC4;
-    box-shadow: inset 16px 16px 32px black;
-
-    border-radius: 30px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    overflow: hidden;
-}
-
-#tainted_window {
-    position: relative;
-    width: 480px;
-    height: 64vh;
-    border-radius: 30px;
-    background: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(31, 31, 31, 0.75) 1%);
-
-    transform: translateY(0);
-    transition: transform 0.5s ease-in-out;
-}
-
-#tainted_window[data-clicked="true"] {
-    transform: translateY(-100%);
+    font-size: xx-large;
 }
