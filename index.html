@@ -8,13 +8,94 @@
     <title>LEMAIRE Valentin - Portfolio</title>
     <link rel="icon" type="image/png" href="./static/vl.png" sizes="512x512">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-<h1>Portfolio de Valentin Lemaire</h1>
-<p>(site en construction)</p>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Valentin Lemaire</h1>
+            <p class="subtitle">Software Developer</p>
+            <div class="header-cta">
+                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="#contact" class="cta-button secondary">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Grid Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <!-- Project Card Template -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="static/portfolio.png" alt="Portfolio">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio</h3>
+                    <p class="project-description">I made my own portfolio to showcase my projects and skills.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://valentin-lemaire.vercel.app" class="project-link" target="_blank">Live Demo</a>
+                        <a href="https://github.com/Valentin-prime/portfolio" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copy this template for each project -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="static/snake.png" alt="Snake">
+                </div>
+                <div class="project-content">
+                    <h3>Snake AI</h3>
+                    <p class="project-description">I made a snake game using Python, Pygame and then I trained a Reinforcement Learning AI to play it using Pytorch.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pygame</span>
+                        <span class="tech-tag">Pytorch</span>
+                    </div>
+                    <div class="project-links">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Email: <a href="mailto:lemairevalentinpro@gmail.com">lemairevalentinpro@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/valentin-lemaire-78b67a328/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Valentin-prime" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="resume-download">
+                <a href="path/to/your/resume.pdf" class="download-button" download>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Valentin Lemaire. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
