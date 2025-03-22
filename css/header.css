@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e0 100%);
     text-align: center;
     padding: 2rem;
 }
@@ -52,5 +52,5 @@
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(45, 55, 72, 0.1);
 } 
