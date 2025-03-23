@@ -2,153 +2,185 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Portfolio">
-    <meta name="author" content="Valentin Lemaire">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>LEMAIRE Valentin - Portfolio</title>
+    <meta name="title" content="LEMAIRE Valentin - Portfolio">
+    <meta name="description" content="Portfolio of Valentin Lemaire, Engineering Student specializing in Python, JavaScript, and web development. Explore my projects including AI, simulations, and web applications.">
+    <meta name="author" content="Valentin Lemaire">
+    <meta name="keywords" content="portfolio, engineering student, python, javascript, web development, AI, machine learning, simulations, pygame, pytorch, html5, canvas">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./static/vl.png" sizes="512x512">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Scripts -->
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Valentin Lemaire",
+        "jobTitle": "Engineering Student",
+        "url": "https://valentin-lemaire.vercel.app",
+        "sameAs": [
+            "https://linkedin.com/in/valentin-lemaire-78b67a328/",
+            "https://github.com/Valentin-prime"
+        ],
+        "knowsAbout": ["Python", "JavaScript", "Web Development", "AI", "Machine Learning", "Simulations"],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "ECE Lyon"
+        }
+    }
+    </script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="header-content">
-            <h1>Valentin Lemaire</h1>
-            <p class="subtitle">Engineering Student</p>
-            <div class="header-cta">
-                <a href="#projects" class="cta-button">View My Work</a>
-                <a href="#contact" class="cta-button secondary">Contact Me</a>
+    <main>
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Valentin Lemaire</h1>
+                <p class="subtitle">Engineering Student</p>
+                <nav class="header-cta">
+                    <a href="#projects" class="cta-button">View My Work</a>
+                    <a href="#contact" class="cta-button secondary">Contact Me</a>
+                </nav>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Projects Grid Section -->
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="static/portfolio.png" alt="Portfolio">
-                </div>
-                <div class="project-content">
-                    <h3>Portfolio</h3>
-                    <p class="project-description">I made my own portfolio to showcase my projects and skills.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+        <!-- Projects Grid Section -->
+        <section id="projects" class="projects-section" aria-label="My Projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="static/portfolio.png" alt="Portfolio website showcasing my projects and skills" loading="lazy">
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="https://github.com/Valentin-prime/portfolio" class="project-link" target="_blank">GitHub</a>
+                    <div class="project-content">
+                        <h3>Portfolio</h3>
+                        <p class="project-description">I made my own portfolio to showcase my projects and skills.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="https://github.com/Valentin-prime/portfolio" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="static/snake.png" alt="Snake game with AI player trained using reinforcement learning" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Snake AI</h3>
+                        <p class="project-description">I made a snake game using Python, Pygame and then I trained a Reinforcement Learning AI to play it using Pytorch.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pygame</span>
+                            <span class="tech-tag">Pytorch</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Valentin-prime/Snake-AI" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="static/double-pendulum.png" alt="Double pendulum physics simulation" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Double Pendulum</h3>
+                        <p class="project-description">I made a double pendulum simulation using Python and Matplotlib.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Valentin-prime/double-pendulum" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="static/boids.png" alt="Boids flocking behavior simulation" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Boids</h3>
+                        <p class="project-description">I made a boids simulation using JavaScript and HTML5 Canvas.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://minimalist-boids.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="https://github.com/Valentin-prime/boids" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="static/game-of-life.png" alt="Conway's Game of Life cellular automaton simulation" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Game of Life</h3>
+                        <p class="project-description">I made a Conway's Game of Life simulation using JavaScript and HTML5 Canvas.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://minimalist-game-of-life.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="https://github.com/Valentin-prime/game-of-life" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
             </div>
+        </section>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="static/snake.png" alt="Snake">
-                </div>
-                <div class="project-content">
-                    <h3>Snake AI</h3>
-                    <p class="project-description">I made a snake game using Python, Pygame and then I trained a Reinforcement Learning AI to play it using Pytorch.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Pygame</span>
-                        <span class="tech-tag">Pytorch</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Valentin-prime/Snake-AI" class="project-link" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="static/double-pendulum.png" alt="Double Pendulum">
-                </div>
-                <div class="project-content">
-                    <h3>Double Pendulum</h3>
-                    <p class="project-description">I made a double pendulum simulation using Python and Matplotlib.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Matplotlib</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Valentin-prime/double-pendulum" class="project-link" target="_blank">GitHub</a>
+        <!-- Footer Section -->
+        <footer id="contact" class="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Email: <a href="mailto:valentin.lemaire@edu.ece.fr">valentin.lemaire@edu.ece.fr</a></p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/valentin-lemaire-78b67a328/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Valentin-prime" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="static/boids.png" alt="Boids">
-                </div>
-                <div class="project-content">
-                    <h3>Boids</h3>
-                    <p class="project-description">I made a boids simulation using JavaScript and HTML5 Canvas.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://minimalist-boids.vercel.app" class="project-link" target="_blank">Live Demo</a>
-                        <a href="https://github.com/Valentin-prime/boids" class="project-link" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="static/game-of-life.png" alt="Game of Life">
-                </div>
-                <div class="project-content">
-                    <h3>Game of Life</h3>
-                    <p class="project-description">I made a Conway's Game of Life simulation using JavaScript and HTML5 Canvas.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://minimalist-game-of-life.vercel.app/" class="project-link" target="_blank">Live Demo</a>
-                        <a href="https://github.com/Valentin-prime/game-of-life" class="project-link" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer id="contact" class="footer">
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>Email: <a href="mailto:valentin.lemaire@edu.ece.fr">valentin.lemaire@edu.ece.fr</a></p>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/valentin-lemaire-78b67a328/" target="_blank" class="social-icon">
-                        <i class="fab fa-linkedin"></i>
+                <div class="resume-download">
+                    <a href="coming-soon.html" class="download-button">
+                        Download Resume
                     </a>
-                    <a href="https://github.com/Valentin-prime" target="_blank" class="social-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
                 </div>
             </div>
-            <div class="resume-download">
-                <a href="coming-soon.html" class="download-button">
-                    Download Resume
-                </a>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Valentin Lemaire. All rights reserved.</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Valentin Lemaire. All rights reserved.</p>
-        </div>
-    </footer>
+        </footer>
+    </main>
 </body>
 </html>
