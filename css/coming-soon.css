@@ -1,3 +1,10 @@
+/* Prevent scrolling */
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 .coming-soon-container {
     height: 100vh;
     display: flex;
