@@ -39,4 +39,4 @@ Or go to [the website](https://valentin-lemaire.vercel.app).
 
 - Email: valentin.lemaire@edu.ece.fr
 - LinkedIn: [Valentin Lemaire](https://linkedin.com/in/valentin-lemaire-78b67a328/)
-- GitHub: [Valentin Lemaire](https://github.com/Valentin-prime) 
+- GitHub: [Valentin Lemaire](https://github.com/Valentin-Lemaire) 
