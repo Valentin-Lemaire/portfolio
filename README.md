@@ -28,7 +28,7 @@ portfolio/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Valentin-prime/portfolio.git
+git clone https://github.com/Valentin-Lemaire/portfolio.git
 ```
 
 2. Open `index.html` in your browser or use a local server.
