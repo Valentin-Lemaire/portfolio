@@ -63,7 +63,7 @@
         <section id="projects" class="projects-section" aria-label="My Projects">
             <h2>My Projects</h2>
             <div class="projects-grid">
-                <article class="project-card">
+                <article class="project-card" data-project="portfolio">
                     <div class="project-image">
                         <img src="static/portfolio.png" alt="Portfolio website" loading="lazy">
                     </div>
@@ -82,7 +82,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-project="snake">
                     <div class="project-image">
                         <img src="static/snake.png" alt="Snake game with AI" loading="lazy">
                     </div>
@@ -100,7 +100,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-project="double-pendulum">
                     <div class="project-image">
                         <img src="static/double-pendulum.png" alt="Double pendulum" loading="lazy">
                     </div>
@@ -117,7 +117,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-project="boids">
                     <div class="project-image">
                         <img src="static/boids.png" alt="Boids" loading="lazy">
                     </div>
@@ -136,7 +136,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-project="game-of-life">
                     <div class="project-image">
                         <img src="static/game-of-life.png" alt="Conway's Game of Life" loading="lazy">
                     </div>
@@ -155,7 +155,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-project="asteroids">
                     <div class="project-image">
                         <img src="static/asteroids.png" alt="Asteroids game" loading="lazy">
                     </div>
@@ -173,6 +173,25 @@
                 </article>
             </div>
         </section>
+
+        <!-- Project Details Modal -->
+        <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-details">
+                        <h2 id="modal-title"></h2>
+                        <div class="modal-tech"></div>
+                        <div class="modal-description"></div>
+                        <div class="modal-how-to">
+                            <h3>How to Use</h3>
+                            <ul></ul>
+                        </div>
+                        <div class="modal-links"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer Section -->
         <footer id="contact" class="footer">
@@ -202,5 +221,6 @@
             </div>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

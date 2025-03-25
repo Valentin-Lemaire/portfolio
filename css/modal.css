@@ -1,0 +1,140 @@
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    color: #2d3748;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: rgba(45, 55, 72, 0.1);
+}
+
+.modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.modal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-details h2 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin: 0;
+    padding-right: 3rem;
+    word-wrap: break-word;
+    line-height: 1.3;
+}
+
+.modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.modal-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.modal-how-to h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.modal-how-to ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-how-to li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.modal-how-to li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2d3748;
+}
+
+.modal-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-links .project-link {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Responsive design for modal */
+@media (max-width: 768px) {
+    .modal-body {
+        padding: 1rem;
+    }
+
+    .modal-details h2 {
+        font-size: 1.75rem;
+        padding-right: 2.5rem;
+    }
+} 
