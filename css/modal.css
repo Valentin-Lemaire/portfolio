@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(13, 13, 13, 0.9);
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -19,7 +19,7 @@
 
 .modal-content {
     position: relative;
-    background-color: white;
+    background-color: var(--primary-color);
     width: 90%;
     max-width: 800px;
     max-height: 90vh;
@@ -28,6 +28,7 @@
     overflow: hidden;
     transform: translateY(-20px);
     transition: transform 0.3s ease;
+    border: 1px solid var(--secondary-color);
 }
 
 .modal.active .modal-content {
@@ -43,18 +44,20 @@
     border: none;
     background: none;
     font-size: 1.5rem;
-    color: #2d3748;
+    color: var(--secondary-color);
     cursor: pointer;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-family: var(--heading-font);
 }
 
 .modal-close:hover {
-    background-color: rgba(45, 55, 72, 0.1);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .modal-body {
@@ -71,11 +74,12 @@
 
 .modal-details h2 {
     font-size: 2rem;
-    color: #2d3748;
+    color: var(--secondary-color);
     margin: 0;
     padding-right: 3rem;
     word-wrap: break-word;
     line-height: 1.3;
+    font-weight: 700;
 }
 
 .modal-tech {
@@ -87,13 +91,16 @@
 .modal-description {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #4a5568;
+    color: var(--secondary-color);
+    opacity: 0.8;
+    font-weight: 400;
 }
 
 .modal-how-to h3 {
     font-size: 1.25rem;
-    color: #2d3748;
+    color: var(--secondary-color);
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .modal-how-to ul {
@@ -106,14 +113,16 @@
     position: relative;
     padding-left: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #4a5568;
+    color: var(--secondary-color);
+    opacity: 0.8;
+    font-weight: 400;
 }
 
 .modal-how-to li::before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #2d3748;
+    color: var(--accent-color);
 }
 
 .modal-links {
@@ -125,6 +134,19 @@
 .modal-links .project-link {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Style for regular links in modal (not project links) */
+.modal-body a:not(.project-link) {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+.modal-body a:not(.project-link):hover {
+    color: var(--accent-color);
 }
 
 /* Responsive design for modal */

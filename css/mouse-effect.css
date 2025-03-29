@@ -1,0 +1,30 @@
+.cursor {
+    width: 20px;
+    height: 20px;
+    background: rgba(224, 224, 224, 0.2);
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease;
+    transform: translate(-50%, -50%);
+}
+
+.cursor.hover {
+    transform: translate(-50%, -50%) scale(2);
+    background: rgba(0, 168, 232, 0.2);
+    border-color: var(--accent-color);
+}
+
+/* Show default cursor */
+body {
+    cursor: auto;
+}
+
+/* Hide the custom cursor on mobile devices */
+@media (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+} 

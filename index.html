@@ -18,6 +18,9 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Scripts -->
     <script>
@@ -49,6 +52,7 @@
     <main>
         <!-- Header Section -->
         <header class="header">
+            <canvas id="headerBackground"></canvas>
             <div class="header-content">
                 <h1>Valentin Lemaire</h1>
                 <p class="subtitle">Engineering Student</p>
@@ -69,7 +73,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Portfolio</h3>
-                        <p class="project-description">I made my own portfolio to showcase my projects and skills.</p>
+                        <p class="project-description">I made my own portfolio to showcase my projects and skills. (You're looking at it!)</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -92,7 +96,6 @@
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Pygame</span>
-                            <span class="tech-tag">Pytorch</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Valentin-Lemaire/Snake-AI" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -217,10 +220,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Valentin Lemaire. All rights reserved.</p>
+                <p>&copy; 2025 Valentin Lemaire. All rights reserved.</p>
             </div>
         </footer>
     </main>
     <script src="script.js"></script>
+    <script src="js/mouse-effect.js"></script>
+    <script src="js/header-background.js"></script>
 </body>
 </html>
