@@ -5,14 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set canvas size with device pixel ratio support
     function resizeCanvas() {
         const dpr = window.devicePixelRatio || 1;
-        const rect = canvas.getBoundingClientRect();
+        const displayWidth = canvas.clientWidth;
+        const displayHeight = canvas.clientHeight;
         
-        canvas.width = rect.width * dpr;
-        canvas.height = rect.height * dpr;
-        
-        ctx.scale(dpr, dpr);
+        // Check if the canvas is not the same size
+        if (canvas.width !== displayWidth * dpr || canvas.height !== displayHeight * dpr) {
+            // Make the canvas the same size
+            canvas.width = displayWidth * dpr;
+            canvas.height = displayHeight * dpr;
+            
+            // Scale all drawing operations by the dpr
+            ctx.scale(dpr, dpr);
+            
+            // Reinitialize points when canvas size changes
+            initializePoints();
+        }
     }
+
+    // Initial resize
     resizeCanvas();
+    
+    // Resize on window resize
     window.addEventListener('resize', resizeCanvas);
 
     // Mouse position with throttling
@@ -37,12 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Grid settings
     const gridSize = 50; // Size of each grid cell
     const points = [];
-    let cols = Math.ceil(canvas.width / gridSize);
-    let rows = Math.ceil(canvas.height / gridSize);
+    let cols = 0;
+    let rows = 0;
 
     // Initialize grid points
     function initializePoints() {
         points.length = 0;
+        cols = Math.ceil(canvas.clientWidth / gridSize);
+        rows = Math.ceil(canvas.clientHeight / gridSize);
+        
         for (let i = 0; i < cols; i++) {
             for (let j = 0; j < rows; j++) {
                 points.push({
@@ -57,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    initializePoints();
 
     // Animation settings
     const mouseRadius = 200; // Radius of mouse influence
@@ -68,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let animationFrameId;
     function animate() {
         // Clear canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
 
         // Smooth mouse movement
         mouseX += (targetX - mouseX) * smoothFactor;
