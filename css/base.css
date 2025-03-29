@@ -9,7 +9,6 @@
 
 html {
     scroll-behavior: smooth;
-    text-size-adjust: 100%;
 }
 
 * {
@@ -23,20 +22,8 @@ body {
     line-height: 1.6;
     color: var(--secondary-color);
     background-color: var(--primary-color);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    line-height: 1.2;
-}
-
-/* Optimize font loading */
-@font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gQO0X1n.woff2') format('woff2');
 } 

@@ -15,9 +15,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./static/vl.png" sizes="512x512">
     
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" as="style">
-    <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gQO0X1n.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="static/portfolio.png" as="image">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
@@ -228,8 +228,9 @@
             </div>
         </footer>
     </main>
-    <script src="script.js"></script>
-    <script src="js/mouse-effect.js"></script>
-    <script src="js/header-background.js"></script>
+    <!-- Defer non-critical scripts -->
+    <script defer src="script.js"></script>
+    <script defer src="js/mouse-effect.js"></script>
+    <script defer src="js/header-background.js"></script>
 </body>
 </html>

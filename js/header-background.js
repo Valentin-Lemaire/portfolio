@@ -1,70 +1,72 @@
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('headerBackground');
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: false });
 
-    // Set canvas size
+    // Set canvas size with device pixel ratio support
     function resizeCanvas() {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        
+        ctx.scale(dpr, dpr);
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Mouse position
+    // Mouse position with throttling
     let mouseX = 0;
     let mouseY = 0;
     let targetX = 0;
     let targetY = 0;
+    let lastMouseMove = 0;
+    const mouseMoveThrottle = 1000 / 60; // 60fps
 
     // Track mouse movement with throttling
-    let lastMouseMove = 0;
-    const throttleDelay = 16; // ~60fps
     document.addEventListener('mousemove', (e) => {
-        const now = Date.now();
-        if (now - lastMouseMove >= throttleDelay) {
-            const rect = canvas.getBoundingClientRect();
-            targetX = e.clientX - rect.left;
-            targetY = e.clientY - rect.top;
-            lastMouseMove = now;
-        }
+        const now = performance.now();
+        if (now - lastMouseMove < mouseMoveThrottle) return;
+        
+        const rect = canvas.getBoundingClientRect();
+        targetX = e.clientX - rect.left;
+        targetY = e.clientY - rect.top;
+        lastMouseMove = now;
     });
 
     // Grid settings
     const gridSize = 50; // Size of each grid cell
     const points = [];
-    const cols = Math.ceil(canvas.width / gridSize);
-    const rows = Math.ceil(canvas.height / gridSize);
+    let cols = Math.ceil(canvas.width / gridSize);
+    let rows = Math.ceil(canvas.height / gridSize);
 
     // Initialize grid points
-    for (let i = 0; i < cols; i++) {
-        for (let j = 0; j < rows; j++) {
-            points.push({
-                x: i * gridSize,
-                y: j * gridSize,
-                baseX: i * gridSize,
-                baseY: j * gridSize,
-                size: 1.5,
-                targetSize: 1.5,
-                currentSize: 1.5
-            });
+    function initializePoints() {
+        points.length = 0;
+        for (let i = 0; i < cols; i++) {
+            for (let j = 0; j < rows; j++) {
+                points.push({
+                    x: i * gridSize,
+                    y: j * gridSize,
+                    baseX: i * gridSize,
+                    baseY: j * gridSize,
+                    size: 1.5,
+                    targetSize: 1.5,
+                    currentSize: 1.5
+                });
+            }
         }
     }
+    initializePoints();
 
     // Animation settings
     const mouseRadius = 200; // Radius of mouse influence
     const maxSize = 3; // Maximum size of points
     const smoothFactor = 0.1; // Smoothing factor for animations
 
-    // Use requestAnimationFrame with a timestamp
-    let lastFrame = 0;
-    function animate(timestamp) {
-        if (!lastFrame) lastFrame = timestamp;
-        const deltaTime = timestamp - lastFrame;
-        lastFrame = timestamp;
-
-        // Skip frame if too much time has passed
-        if (deltaTime > 100) return;
-
+    // Animation loop with requestAnimationFrame
+    let animationFrameId;
+    function animate() {
         // Clear canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -93,9 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fill();
         });
 
-        requestAnimationFrame(animate);
+        animationFrameId = requestAnimationFrame(animate);
     }
 
     // Start animation
-    requestAnimationFrame(animate);
+    animate();
+
+    // Cleanup on page unload
+    window.addEventListener('unload', () => {
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+        }
+    });
 }); 
