@@ -11,30 +11,17 @@
     <meta name="author" content="Valentin Lemaire">
     <meta name="keywords" content="portfolio, engineering student, python, C, javascript, web development, AI, machine learning, simulations, pygame, pytorch, html5, canvas">
     <meta name="google-site-verification" content="g2R1NCKpjJBkueBedW4tyCJ_lSDD0gWB9Q7T51Chj_E" />
-    <meta http-equiv="Cache-Control" content="max-age=31536000">
-    <meta name="theme-color" content="#0D0D0D">
 
-    <!-- Preload critical assets -->
-    <link rel="preload" href="./static/vl.png" as="image">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" as="style">
-    <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXskPMBBSSJLm2E.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Preload project images -->
-    <link rel="preload" href="static/portfolio.png" as="image">
-    <link rel="preload" href="static/snake.png" as="image">
-    <link rel="preload" href="static/double-pendulum.png" as="image">
-    <link rel="preload" href="static/boids.png" as="image">
-    <link rel="preload" href="static/game-of-life.png" as="image">
-    <link rel="preload" href="static/asteroids.png" as="image">
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./static/vl.png" sizes="512x512">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gQO0X1n.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Defer non-critical font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -86,7 +73,7 @@
             <div class="projects-grid">
                 <article class="project-card" data-project="portfolio">
                     <div class="project-image">
-                        <img src="static/portfolio.png" alt="Portfolio website" loading="lazy" width="300" height="200">
+                        <img src="static/portfolio.png" alt="Portfolio website" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3>Portfolio</h3>
@@ -105,7 +92,7 @@
 
                 <article class="project-card" data-project="snake">
                     <div class="project-image">
-                        <img src="static/snake.png" alt="Snake game with AI" loading="lazy" width="300" height="200">
+                        <img src="static/snake.png" alt="Snake game with AI" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3>Snake AI</h3>
@@ -122,7 +109,7 @@
 
                 <article class="project-card" data-project="double-pendulum">
                     <div class="project-image">
-                        <img src="static/double-pendulum.png" alt="Double pendulum" loading="lazy" width="300" height="200">
+                        <img src="static/double-pendulum.png" alt="Double pendulum" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3>Double Pendulum</h3>
@@ -139,7 +126,7 @@
 
                 <article class="project-card" data-project="boids">
                     <div class="project-image">
-                        <img src="static/boids.png" alt="Boids" loading="lazy" width="300" height="200">
+                        <img src="static/boids.png" alt="Boids" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3>Boids</h3>
@@ -158,7 +145,7 @@
 
                 <article class="project-card" data-project="game-of-life">
                     <div class="project-image">
-                        <img src="static/game-of-life.png" alt="Conway's Game of Life" loading="lazy" width="300" height="200">
+                        <img src="static/game-of-life.png" alt="Conway's Game of Life" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3>Game of Life</h3>
@@ -177,7 +164,7 @@
 
                 <article class="project-card" data-project="asteroids">
                     <div class="project-image">
-                        <img src="static/asteroids.png" alt="Asteroids game" loading="lazy" width="300" height="200">
+                        <img src="static/asteroids.png" alt="Asteroids game" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3>Asteroids</h3>
@@ -241,9 +228,8 @@
             </div>
         </footer>
     </main>
-    <!-- Defer non-critical scripts -->
-    <script src="script.js" defer></script>
-    <script src="js/mouse-effect.js" defer></script>
-    <script src="js/header-background.js" defer></script>
+    <script src="script.js"></script>
+    <script src="js/mouse-effect.js"></script>
+    <script src="js/header-background.js"></script>
 </body>
 </html>

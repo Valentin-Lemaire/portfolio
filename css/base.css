@@ -3,22 +3,12 @@
     --primary-color: #0D0D0D;
     --secondary-color: #E0E0E0;
     --accent-color: #00A8E8;
-    --heading-font: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-    --body-font: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-}
-
-/* Font optimization */
-@font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXskPMBBSSJLm2E.woff2) format('woff2');
+    --heading-font: 'Space Grotesk', sans-serif;
+    --body-font: 'IBM Plex Sans', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
 
@@ -35,28 +25,18 @@ body {
     background-color: var(--primary-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     line-height: 1.2;
-    contain: text;
 }
 
-/* Optimize images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Optimize animations */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+/* Optimize font loading */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gQO0X1n.woff2') format('woff2');
 } 
