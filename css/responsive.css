@@ -27,4 +27,8 @@
     .project-content h3 {
         font-size: 1.25rem;
     }
+
+    .typing-text {
+        opacity: 1;
+    }
 } 

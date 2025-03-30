@@ -7,9 +7,3 @@
 @import 'css/responsive.css';
 @import 'css/modal.css';
 @import 'css/mouse-effect.css';
-
-.typing-text {
-    display: inline-block;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}

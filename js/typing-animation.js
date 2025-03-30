@@ -1,5 +1,16 @@
 class TypingAnimation {
     constructor() {
+        // Check if device is mobile
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        // If mobile, show all text immediately and return
+        if (isMobile) {
+            document.querySelectorAll('.typing-text').forEach(text => {
+                text.style.opacity = '1';
+            });
+            return;
+        }
+
         this.texts = document.querySelectorAll('.typing-text');
         this.currentIndex = 0;
         this.currentTextIndex = 0;
@@ -52,5 +63,7 @@ class TypingAnimation {
 // Initialize and start the animation when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     const typingAnimation = new TypingAnimation();
-    typingAnimation.start();
+    if (typingAnimation.texts) { // Only start if not mobile
+        typingAnimation.start();
+    }
 }); 
