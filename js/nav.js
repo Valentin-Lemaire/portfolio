@@ -12,35 +12,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Theme switching
-    themeSwitch.addEventListener('click', () => {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-        
-        // Reverse primary and secondary colors
-        const root = document.documentElement;
-        const primaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
-        const secondaryColor = getComputedStyle(root).getPropertyValue('--secondary-color').trim();
-        
-        root.style.setProperty('--primary-color', secondaryColor);
-        root.style.setProperty('--secondary-color', primaryColor);
-        
-        // Update icon based on new primary color
-        updateIcon();
-        
-        // Save preferences
-        localStorage.setItem('theme', isDark ? 'light' : 'dark');
-        localStorage.setItem('primaryColor', secondaryColor);
-        localStorage.setItem('secondaryColor', primaryColor);
-    });
+    if (themeSwitch) {
+        themeSwitch.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            
+            // Reverse primary and secondary colors
+            const root = document.documentElement;
+            const primaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
+            const secondaryColor = getComputedStyle(root).getPropertyValue('--secondary-color').trim();
+            
+            root.style.setProperty('--primary-color', secondaryColor);
+            root.style.setProperty('--secondary-color', primaryColor);
+            
+            // Update icon based on new primary color
+            updateIcon();
+            
+            // Save preferences
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+            localStorage.setItem('primaryColor', secondaryColor);
+            localStorage.setItem('secondaryColor', primaryColor);
+        });
+    }
 
     // Language switching
-    langSwitch.addEventListener('click', () => {
-        const isFrench = langText.textContent === 'FR';
-        langText.textContent = isFrench ? 'EN' : 'FR';
-        
-        // Save preference
-        localStorage.setItem('language', isFrench ? 'en' : 'fr');
-    });
+    if (langSwitch && langText) {
+        langSwitch.addEventListener('click', () => {
+            const isFrench = langText.textContent === 'FR';
+            langText.textContent = isFrench ? 'EN' : 'FR';
+            
+            // Save preference
+            localStorage.setItem('language', isFrench ? 'en' : 'fr');
+        });
+    }
 
     // Load saved preferences
     const savedTheme = localStorage.getItem('theme');
@@ -52,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('data-theme', savedTheme);
     }
 
-    if (savedLang) {
+    if (savedLang && langText) {
         langText.textContent = savedLang === 'fr' ? 'FR' : 'EN';
     }
 
@@ -64,5 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initial icon update
-    updateIcon();
+    if (themeSwitch) {
+        updateIcon();
+    }
 }); 
