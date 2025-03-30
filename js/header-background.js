@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start animation
     animate();
 
-    // Cleanup on page unload
-    window.addEventListener('unload', () => {
-        if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
-        }
+    // Clean up on page unload
+    window.addEventListener('beforeunload', () => {
+        cancelAnimationFrame(animationFrameId);
+        canvas.removeEventListener('mousemove', handleMouseMove);
+        canvas.removeEventListener('mouseleave', handleMouseLeave);
     });
 }); 
