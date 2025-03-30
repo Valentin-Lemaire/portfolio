@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('headerBackground');
     const ctx = canvas.getContext('2d', { alpha: false });
 
+    // Grid settings
+    const gridSize = 50; // Size of each grid cell
+    const points = [];
+    let cols = 0;
+    let rows = 0;
+
     // Set canvas size with device pixel ratio support
     function resizeCanvas() {
         const dpr = window.devicePixelRatio || 1;
@@ -19,6 +25,27 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Reinitialize points when canvas size changes
             initializePoints();
+        }
+    }
+
+    // Initialize grid points
+    function initializePoints() {
+        points.length = 0;
+        cols = Math.ceil(canvas.clientWidth / gridSize);
+        rows = Math.ceil(canvas.clientHeight / gridSize);
+        
+        for (let i = 0; i < cols; i++) {
+            for (let j = 0; j < rows; j++) {
+                points.push({
+                    x: i * gridSize,
+                    y: j * gridSize,
+                    baseX: i * gridSize,
+                    baseY: j * gridSize,
+                    size: 1.5,
+                    targetSize: 1.5,
+                    currentSize: 1.5
+                });
+            }
         }
     }
 
@@ -46,33 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
         targetY = e.clientY - rect.top;
         lastMouseMove = now;
     });
-
-    // Grid settings
-    const gridSize = 50; // Size of each grid cell
-    const points = [];
-    let cols = 0;
-    let rows = 0;
-
-    // Initialize grid points
-    function initializePoints() {
-        points.length = 0;
-        cols = Math.ceil(canvas.clientWidth / gridSize);
-        rows = Math.ceil(canvas.clientHeight / gridSize);
-        
-        for (let i = 0; i < cols; i++) {
-            for (let j = 0; j < rows; j++) {
-                points.push({
-                    x: i * gridSize,
-                    y: j * gridSize,
-                    baseX: i * gridSize,
-                    baseY: j * gridSize,
-                    size: 1.5,
-                    targetSize: 1.5,
-                    currentSize: 1.5
-                });
-            }
-        }
-    }
 
     // Animation settings
     const mouseRadius = 200; // Radius of mouse influence
