@@ -16,7 +16,8 @@
     <link rel="icon" type="image/png" href="./static/vl.png" sizes="512x512">
     
     <!-- Preload critical assets -->
-    <link rel="preload" href="static/portfolio.png" as="image">
+    <link rel="preload" href="static/portfolio.webp" as="image" type="image/webp">
+    <link rel="preload" href="static/portfolio.png" as="image" type="image/png">
     <link rel="preload" href="static/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="static/fonts/SpaceGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
     
@@ -71,7 +72,10 @@
             <div class="projects-grid">
                 <article class="project-card" data-project="portfolio">
                     <div class="project-image">
-                        <img src="static/portfolio.png" alt="Portfolio website" loading="lazy">
+                        <picture>
+                            <source srcset="static/portfolio.webp" type="image/webp">
+                            <img src="static/portfolio.png" alt="Portfolio website" loading="lazy">
+                        </picture>
                     </div>
                     <div class="project-content">
                         <h3>Portfolio</h3>
@@ -90,7 +94,10 @@
 
                 <article class="project-card" data-project="snake">
                     <div class="project-image">
-                        <img src="static/snake.png" alt="Snake game with AI" loading="lazy">
+                        <picture>
+                            <source srcset="static/snake.webp" type="image/webp">
+                            <img src="static/snake.png" alt="Snake game with AI" loading="lazy">
+                        </picture>
                     </div>
                     <div class="project-content">
                         <h3>Snake AI</h3>
@@ -107,7 +114,10 @@
 
                 <article class="project-card" data-project="double-pendulum">
                     <div class="project-image">
-                        <img src="static/double-pendulum.png" alt="Double pendulum" loading="lazy">
+                        <picture>
+                            <source srcset="static/double-pendulum.webp" type="image/webp">
+                            <img src="static/double-pendulum.png" alt="Double pendulum" loading="lazy">
+                        </picture>
                     </div>
                     <div class="project-content">
                         <h3>Double Pendulum</h3>
@@ -124,7 +134,10 @@
 
                 <article class="project-card" data-project="boids">
                     <div class="project-image">
-                        <img src="static/boids.png" alt="Boids" loading="lazy">
+                        <picture>
+                            <source srcset="static/boids.webp" type="image/webp">
+                            <img src="static/boids.png" alt="Boids" loading="lazy">
+                        </picture>
                     </div>
                     <div class="project-content">
                         <h3>Boids</h3>
@@ -143,7 +156,10 @@
 
                 <article class="project-card" data-project="game-of-life">
                     <div class="project-image">
-                        <img src="static/game-of-life.png" alt="Conway's Game of Life" loading="lazy">
+                        <picture>
+                            <source srcset="static/game-of-life.webp" type="image/webp">
+                            <img src="static/game-of-life.png" alt="Conway's Game of Life" loading="lazy">
+                        </picture>
                     </div>
                     <div class="project-content">
                         <h3>Game of Life</h3>
@@ -162,7 +178,10 @@
 
                 <article class="project-card" data-project="asteroids">
                     <div class="project-image">
-                        <img src="static/asteroids.png" alt="Asteroids game" loading="lazy">
+                        <picture>
+                            <source srcset="static/asteroids.webp" type="image/webp">
+                            <img src="static/asteroids.png" alt="Asteroids game" loading="lazy">
+                        </picture>
                     </div>
                     <div class="project-content">
                         <h3>Asteroids</h3>
