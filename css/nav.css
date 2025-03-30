@@ -3,7 +3,7 @@
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
+    width: 50%;
     z-index: 1000;
     padding: 0 20px;
 }
@@ -17,7 +17,7 @@
     padding: 1rem;
     box-shadow: 0 0 10px var(--accent-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -69,7 +69,6 @@
 .nav-switches {
     display: flex;
     gap: 1rem;
-    margin-left: 1rem;
 }
 
 .switch-btn {
@@ -140,6 +139,10 @@
     .lang-text {
         font-size: 0.7rem;
     }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -148,13 +151,19 @@
     }
 
     .nav-bar {
-        flex-direction: column;
-        gap: 0.5rem;
+        padding: 0.6rem;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .nav-logo {
+        font-size: 1rem;
     }
 
     .nav-switches {
