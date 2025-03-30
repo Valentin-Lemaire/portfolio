@@ -2,7 +2,7 @@
 const projectDetails = {
     portfolio: {
         title: "Portfolio Website",
-        description: "I made my own portfolio to showcase my projects and skills",
+        description: "I made my own portfolio to showcase my projects and skills. (By the way, if you have any feedback, please let me know!)",
         howToUse: [
             "Click on any project card to see more details",
             "Use the navigation buttons to explore different sections",
@@ -12,7 +12,7 @@ const projectDetails = {
     },
     snake: {
         title: "Snake AI",
-        description: "A classic Snake game implementation with an AI player trained using reinforcement learning. The AI learns to navigate the game board and collect food while avoiding collisions.",
+        description: "A classic Snake game implementation with an AI player trained using reinforcement learning. The AI learns to navigate the game board and collect food while avoiding collisions. (I have for project to soon remake an AI to play this using Pytorch with a neural network.)",
         howToUse: [
             "Click on the GitHub link to see the code",
             "Run the game using Python and Pygame",
@@ -22,7 +22,7 @@ const projectDetails = {
     },
     "double-pendulum": {
         title: "Double Pendulum Simulation",
-        description: "A physics simulation of a double pendulum system, demonstrating chaotic motion and complex dynamics. The simulation accurately models the behavior of coupled oscillators.",
+        description: "A physics simulation of a double pendulum system, demonstrating chaotic motion and complex dynamics. The simulation accurately models the behavior of coupled oscillators. (Having multiple pendulums running at the same time with a slight offset at the beginning is a good way to see the chaotic motion and is really cool.)",
         howToUse: [
             "Click on the GitHub link to see the code",
             "Run the simulation using Python",
@@ -51,7 +51,7 @@ const projectDetails = {
     },
     asteroids: {
         title: "Asteroids Game",
-        description: "A recreation of the classic arcade game Asteroids. This project was a project I made in High School to learn Object Oriented Programming in Python.",
+        description: "A recreation of the classic arcade game Asteroids. This project was a project I made in High School to learn Object Oriented Programming in Python. (The code is a bit messy, but it works and I don't see any reason to clean it up.)",
         howToUse: [
             "Click on the GitHub link to see the code",
             "Run the game using Python and Pygame",
