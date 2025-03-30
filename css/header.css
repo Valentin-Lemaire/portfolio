@@ -22,7 +22,7 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    color: white;
+    color: var(--secondary-color);
     padding: 2rem;
 }
 
@@ -75,9 +75,4 @@
     background-color: transparent;
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
-}
-
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 168, 232, 0.2);
 }

@@ -23,6 +23,7 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Scripts -->
@@ -53,6 +54,26 @@
     </script>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container">
+        <div class="nav-bar">
+            <a href="#" class="nav-logo">Valentin Lemaire</a>
+            <div class="nav-links">
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="coming-soon.html" class="nav-link">Resume</a>
+                <div class="nav-switches">
+                    <button class="switch-btn theme-switch" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <!--<button class="switch-btn lang-switch" aria-label="Toggle language">
+                        <span class="lang-text">FR</span>
+                    </button>-->
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <main>
         <!-- Header Section -->
         <header class="header">
@@ -251,5 +272,6 @@
     <script defer src="js/mouse-effect.js"></script>
     <script defer src="js/three-background.js"></script>
     <script defer src="js/typing-animation.js"></script>
+    <script defer src="js/nav.js"></script>
 </body>
 </html>
