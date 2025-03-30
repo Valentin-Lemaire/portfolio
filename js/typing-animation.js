@@ -1,12 +1,14 @@
 class TypingAnimation {
     constructor() {
-        // Check if device is mobile
+        // Check if device is mobile or has low performance
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const hasLowPerformance = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         
-        // If mobile, show all text immediately and return
-        if (isMobile) {
+        // If mobile or prefers reduced motion, show all text immediately and return
+        if (isMobile || hasLowPerformance) {
             document.querySelectorAll('.typing-text').forEach(text => {
                 text.style.opacity = '1';
+                text.style.display = 'inline-block';
             });
             return;
         }

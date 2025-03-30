@@ -28,7 +28,14 @@
         font-size: 1.25rem;
     }
 
+    /* Ensure text is immediately visible on mobile */
     .typing-text {
-        opacity: 1;
+        opacity: 1 !important;
+        display: inline-block;
+    }
+
+    /* Disable animations on mobile */
+    .header-cta .cta-button {
+        opacity: 1 !important;
     }
 } 
