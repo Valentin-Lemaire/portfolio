@@ -16,15 +16,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <canvas id="headerBackground"></canvas>
-    <div class="coming-soon-container">
-        <h1>Coming Soon</h1>
-        <p>My resume is currently under construction.</p>
-        <a href="index.html" class="back-button">Back to Portfolio</a>
-    </div>
-    <script src="js/mouse-effect.js"></script>
-    <script src="js/header-background.js"></script>
+    <main>
+        <header class="header">
+            <div class="header-content">
+                <h1>Coming Soon</h1>
+                <p class="subtitle">My resume is currently under construction.</p>
+                <nav class="header-cta">
+                    <a href="index.html" class="cta-button">Back to Portfolio</a>
+                </nav>
+            </div>
+        </header>
+    </main>
+    <!-- Defer non-critical scripts -->
+    <script defer src="js/mouse-effect.js"></script>
+    <script defer src="js/header-background.js"></script>
+    <script defer src="js/three-background.js"></script>
 </body>
 </html> 

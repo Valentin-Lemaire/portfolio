@@ -1,13 +1,11 @@
 /* Header styles */
 .header {
+    position: relative;
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
-    text-align: center;
-    padding: 2rem;
-    position: relative;
     overflow: hidden;
 }
 
@@ -21,24 +19,32 @@
 }
 
 .header-content {
-    max-width: 800px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 2rem;
 }
 
 .header h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: var(--secondary-color);
-    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.subtitle {
+.header .subtitle {
     font-size: 1.5rem;
-    color: var(--secondary-color);
-    opacity: 0.8;
     margin-bottom: 2rem;
-    font-weight: 400;
+    opacity: 0.9;
+}
+
+.header canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 .header-cta {
@@ -74,4 +80,4 @@
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 168, 232, 0.2);
-} 
+}
