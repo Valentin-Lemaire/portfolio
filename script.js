@@ -143,6 +143,16 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Handle portfolio live demo link click
+modalLinks.addEventListener('click', (e) => {
+    const link = e.target.closest('.project-link');
+    if (link && link.getAttribute('href') === '#') {
+        e.preventDefault();
+        closeModal();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
+
 // Trap focus within modal when open
 modal.addEventListener('keydown', (e) => {
     if (!modal.classList.contains('active')) return;
