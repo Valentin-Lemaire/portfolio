@@ -5,6 +5,7 @@
     --accent-color: #00A8E8;
     --heading-font: 'Space Grotesk', sans-serif;
     --body-font: 'IBM Plex Sans', sans-serif;
+    --gradient-border: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
 }
 
 html {

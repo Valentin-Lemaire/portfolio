@@ -2,7 +2,18 @@
 .projects-section {
     padding: 5rem 2rem;
     background-color: var(--primary-color);
-    border-top: 1px solid var(--secondary-color);
+    position: relative;
+}
+
+.projects-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-border);
+    opacity: 0.5;
 }
 
 .projects-section h2 {
