@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.footer::before {
+.footer::before, .footer-bottom::before {
     content: '';
     position: absolute;
     top: 0;
@@ -66,17 +66,6 @@
     position: relative;
     opacity: 0.8;
     font-weight: 400;
-}
-
-.footer-bottom::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--gradient-border);
-    opacity: 0.5;
 }
 
 /* Social Media Icons */

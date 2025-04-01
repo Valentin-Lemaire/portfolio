@@ -1,0 +1,107 @@
+.about-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-border);
+    opacity: 0.5;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-bio {
+    padding: 2rem;
+    background: var(--primary-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1px var(--secondary-color);
+}
+
+.about-bio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+.about-grid a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-bio a:hover {
+    color: var(--accent-color);
+}
+
+.about-skills {
+    padding: 2rem;
+    background: var(--primary-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1px var(--secondary-color);
+}
+
+.skill-category {
+    margin-bottom: 2.5rem;
+}
+
+.skill-category:last-child {
+    margin-bottom: 0;
+}
+
+.skill-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+}
+
+.skill-item {
+    margin-bottom: 1.2rem;
+}
+
+.skill-item:last-child {
+    margin-bottom: 0;
+}
+
+.skill-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+}
+
+.skill-item p {
+    color: var(--secondary-color);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-section {
+        padding: 3rem 1rem;
+    }
+} 

@@ -13,17 +13,14 @@
     <meta name="google-site-verification" content="g2R1NCKpjJBkueBedW4tyCJ_lSDD0gWB9Q7T51Chj_E" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./static/vl.png" sizes="512x512">
+    <link rel="icon" type="image/png" href="./static/images/vl.png" sizes="512x512">
     
     <!-- Preload critical assets -->
-    <link rel="preload" href="static/portfolio.webp" as="image" type="image/webp">
-    <link rel="preload" href="static/portfolio.png" as="image" type="image/png">
     <link rel="preload" href="static/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="static/fonts/SpaceGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Scripts -->
@@ -59,9 +56,9 @@
         <div class="nav-bar">
             <a href="#" class="nav-logo">VL</a>
             <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="coming-soon.html" class="nav-link">Resume</a>
             </div>
             <div class="nav-switches">
                 <button class="switch-btn theme-switch" aria-label="Toggle theme">
@@ -87,6 +84,63 @@
             </div>
         </header>
 
+        <!-- About Section -->
+        <section id="about" class="about-section" aria-label="About Me">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-bio">
+                    <p>
+                        My name is Valentin Lemaire, I'm 18 years old, and I'm from Lyon, France.
+                        <br><br>
+                        I'm a first-year engineering student at <a href="https://www.ece.fr/" target="_blank" rel="noopener noreferrer">ECE Lyon</a>, specializing in <strong>computer science</strong>.
+                        <br><br>
+                        I started coding at home in 2021, learning most of my technical skills independently.
+                        The only exceptions are Python, which I studied during my final year of high school, and low-level programming (C), which I'm currently learning as part of my engineering studies.
+                        My front-end web development skills are entirely self-taught.
+                        <br><br>
+                        Teaching myself to code has been both a challenge and a rewarding journey.
+                        I know that learning in the field of engineering never truly stops, as technology constantly evolves.
+                        However, through this experience, I've developed one of the most valuable skills an engineer can have: the ability to <strong>learn independently</strong>.
+                    </p>
+                </div>
+                <div class="about-skills">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-item">
+                            <h4>Python</h4>
+                            <p>I've learned Python in my last year of High School and I've used it for many projects since then.</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>C</h4>
+                            <p>I'm currently learning C in my engineering formation.</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>JavaScript</h4>
+                            <p>I've learned some JavaScript by myself and I've used it in some projects. I've also learned the basics of <a href="https://threejs.org/" target="_blank" rel="noopener noreferrer">Three.js</a> which is a library to make 3D graphics.</p>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <div class="skill-item">
+                            <h4>HTML5 & CSS3</h4>
+                            <p>I've learned HTML5 and CSS3 by myself and I've improved over time by doing lots of personal projects.</p>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skill-item">
+                            <h4>Version Control</h4>
+                            <p>I've only recently started using Git and GitHub but I'm getting the hang of it.</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Vercel</h4>
+                            <p>I've used Vercel to deploy most of my web projects including this portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Grid Section -->
         <section id="projects" class="projects-section" aria-label="My Projects">
             <h2>My Projects</h2>
@@ -94,8 +148,8 @@
                 <article class="project-card" data-project="portfolio">
                     <div class="project-image">
                         <picture>
-                            <source srcset="static/portfolio.webp" type="image/webp">
-                            <img src="static/portfolio.png" alt="Portfolio website" loading="lazy">
+                            <source srcset="static/images/portfolio.webp" type="image/webp">
+                            <img src="static/images/portfolio.png" alt="Portfolio website" loading="lazy">
                         </picture>
                     </div>
                     <div class="project-content">
@@ -117,8 +171,8 @@
                 <article class="project-card" data-project="snake">
                     <div class="project-image">
                         <picture>
-                            <source srcset="static/snake.webp" type="image/webp">
-                            <img src="static/snake.png" alt="Snake game with AI" loading="lazy">
+                            <source srcset="static/images/snake.webp" type="image/webp">
+                            <img src="static/images/snake.png" alt="Snake game with AI" loading="lazy">
                         </picture>
                     </div>
                     <div class="project-content">
@@ -137,8 +191,8 @@
                 <article class="project-card" data-project="double-pendulum">
                     <div class="project-image">
                         <picture>
-                            <source srcset="static/double-pendulum.webp" type="image/webp">
-                            <img src="static/double-pendulum.png" alt="Double pendulum" loading="lazy">
+                            <source srcset="static/images/double-pendulum.webp" type="image/webp">
+                            <img src="static/images/double-pendulum.png" alt="Double pendulum" loading="lazy">
                         </picture>
                     </div>
                     <div class="project-content">
@@ -157,8 +211,8 @@
                 <article class="project-card" data-project="boids">
                     <div class="project-image">
                         <picture>
-                            <source srcset="static/boids.webp" type="image/webp">
-                            <img src="static/boids.png" alt="Boids" loading="lazy">
+                            <source srcset="static/images/boids.webp" type="image/webp">
+                            <img src="static/images/boids.png" alt="Boids" loading="lazy">
                         </picture>
                     </div>
                     <div class="project-content">
@@ -179,8 +233,8 @@
                 <article class="project-card" data-project="game-of-life">
                     <div class="project-image">
                         <picture>
-                            <source srcset="static/game-of-life.webp" type="image/webp">
-                            <img src="static/game-of-life.png" alt="Conway's Game of Life" loading="lazy">
+                            <source srcset="static/images/game-of-life.webp" type="image/webp">
+                            <img src="static/images/game-of-life.png" alt="Conway's Game of Life" loading="lazy">
                         </picture>
                     </div>
                     <div class="project-content">
@@ -201,8 +255,8 @@
                 <article class="project-card" data-project="asteroids">
                     <div class="project-image">
                         <picture>
-                            <source srcset="static/asteroids.webp" type="image/webp">
-                            <img src="static/asteroids.png" alt="Asteroids game" loading="lazy">
+                            <source srcset="static/images/asteroids.webp" type="image/webp">
+                            <img src="static/images/asteroids.png" alt="Asteroids game" loading="lazy">
                         </picture>
                     </div>
                     <div class="project-content">
