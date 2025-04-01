@@ -104,4 +104,30 @@
     .about-section {
         padding: 3rem 1rem;
     }
-} 
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.skill-header h4 {
+    margin-bottom: 0;
+    min-width: 100px;
+}
+
+.skill-progress {
+    flex: 1;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
