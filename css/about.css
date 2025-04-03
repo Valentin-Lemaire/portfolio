@@ -41,7 +41,7 @@
     font-size: 1.1rem;
     line-height: 1.6;
     color: var(--secondary-color);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .about-grid a {
@@ -91,7 +91,7 @@
 
 .skill-item p {
     color: var(--secondary-color);
-    opacity: 0.8;
+    opacity: 0.9;
     font-size: 0.95rem;
     line-height: 1.5;
 }
