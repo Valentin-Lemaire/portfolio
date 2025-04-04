@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let cursor2X = 0;
     let cursor2Y = 0;
 
+    document.addEventListener('mouseenter', () => {
+        cursor.style.display = 'block';
+        cursor2.style.display = 'block';
+    });
+
+    document.addEventListener('mouseleave', () => {
+        cursor.style.display = 'none';
+        cursor2.style.display = 'none';
+    });
+
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
@@ -29,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function animate() {
-        const delay = 0.3;
+        const delay = 0.2;
         cursor2X += (mouseX - cursor2X) * delay;
         cursor2Y += (mouseY - cursor2Y) * delay;
 
