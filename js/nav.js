@@ -2,18 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeSwitch = document.querySelector('.theme-switch');
     const langSwitch = document.querySelector('.lang-switch');
     const langText = document.querySelector('.lang-text');
-
-    // Function to update icon based on primary color
-    function updateIcon() {
-        const root = document.documentElement;
-        const primaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
-        const icon = themeSwitch.querySelector('i');
-        icon.className = primaryColor === '#E0E0E0' ? 'fas fa-moon' : 'fas fa-sun';
-    }
+    const sunIcon = themeSwitch.querySelector('.sun-icon');
+    const moonIcon = themeSwitch.querySelector('.moon-icon');
 
     // Theme switching
     if (themeSwitch) {
         themeSwitch.addEventListener('click', () => {
+            // Toggle icons
+            if (sunIcon.style.display !== 'none') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+            
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
             
@@ -24,9 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             root.style.setProperty('--primary-color', secondaryColor);
             root.style.setProperty('--secondary-color', primaryColor);
-            
-            // Update icon based on new primary color
-            updateIcon();
             
             // Save preferences
             localStorage.setItem('theme', isDark ? 'light' : 'dark');
@@ -54,6 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
+        // Set initial icon state based on saved theme
+        if (savedTheme === 'light') {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        }
     }
 
     if (savedLang && langText) {
@@ -65,10 +70,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const root = document.documentElement;
         root.style.setProperty('--primary-color', savedPrimaryColor);
         root.style.setProperty('--secondary-color', savedSecondaryColor);
-    }
-
-    // Initial icon update
-    if (themeSwitch) {
-        updateIcon();
     }
 }); 

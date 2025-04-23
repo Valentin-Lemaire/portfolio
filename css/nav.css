@@ -92,10 +92,6 @@
     transform: scale(1.1);
 }
 
-.switch-btn i {
-    font-size: 1rem;
-}
-
 .lang-switch {
     font-family: inherit;
     font-weight: 500;
@@ -105,9 +101,9 @@
     font-size: 0.8rem;
 }
 
-/* Dark mode styles */
-[data-theme="dark"] .theme-switch i {
-    content: "\f186"; /* moon icon */
+.sun-icon, .moon-icon {
+    stroke: currentColor;
+    stroke-linecap: round;
 }
 
 @media (max-width: 768px) {
@@ -131,10 +127,6 @@
     .switch-btn {
         width: 24px;
         height: 24px;
-    }
-
-    .switch-btn i {
-        font-size: 0.9rem;
     }
 
     .lang-text {
