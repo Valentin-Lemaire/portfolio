@@ -4,10 +4,10 @@ from pathlib import Path
 
 def convert_to_webp():
     # Get the static directory path
-    static_dir = Path('static')
+    images_dir = Path('static/images/')
     
     # Create a list of all PNG files in the static directory
-    png_files = list(static_dir.glob('*.png'))
+    png_files = list(images_dir.glob('*.png'))
     
     print(f"Found {len(png_files)} PNG files to convert")
     

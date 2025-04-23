@@ -60,6 +60,14 @@ const projectDetails = {
             "Try to achieve the highest score",
             "Difficulty increases as you progress"
         ]
+    },
+    "ai-image-gallery": {
+        title: "AI Image Gallery",
+        description: "I made an AI image gallery website using HTML, CSS and JavaScript. I used a '<a href='https://chatgpt.com/gpts' target='_blank' rel='noopener noreferrer'>GPT</a>', as <a href='https://openai.com/' target='_blank' rel='noopener noreferrer'>OpenAI</a> calls them, that I built myself to first generate complex and various prompts and then generated the images all at once.",
+        howToUse: [
+            "Open the live demo in your web browser",
+            "Click on the images to download them"
+        ]
     }
 };
 
