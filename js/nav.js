@@ -8,17 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme switching
     if (themeSwitch) {
         themeSwitch.addEventListener('click', () => {
-            // Toggle icons
-            if (sunIcon.style.display !== 'none') {
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-            } else {
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            }
-            
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            
+            // First toggle theme
+            const newTheme = isDark ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            
+            // Then update icons based on new theme
+            // Show sun icon when in dark mode, moon icon when in light mode
+            const isNewThemeDark = newTheme === 'dark';
+            sunIcon.style.display = isNewThemeDark ? 'block' : 'none';
+            moonIcon.style.display = isNewThemeDark ? 'none' : 'block';
             
             // Reverse primary and secondary colors
             const root = document.documentElement;
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             root.style.setProperty('--secondary-color', primaryColor);
             
             // Save preferences
-            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+            localStorage.setItem('theme', newTheme);
             localStorage.setItem('primaryColor', secondaryColor);
             localStorage.setItem('secondaryColor', primaryColor);
         });
@@ -55,10 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
         // Set initial icon state based on saved theme
-        if (savedTheme === 'light') {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
-        }
+        const isDark = savedTheme === 'dark';
+        sunIcon.style.display = isDark ? 'block' : 'none';
+        moonIcon.style.display = isDark ? 'none' : 'block';
     }
 
     if (savedLang && langText) {
