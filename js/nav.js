@@ -1,73 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme switching functionality
     const themeSwitch = document.querySelector('.theme-switch');
-    const langSwitch = document.querySelector('.lang-switch');
-    const langText = document.querySelector('.lang-text');
     const sunIcon = themeSwitch.querySelector('.sun-icon');
     const moonIcon = themeSwitch.querySelector('.moon-icon');
 
-    // Theme switching
-    if (themeSwitch) {
-        themeSwitch.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    // Theme management class
+    class ThemeManager {
+        constructor() {
+            // Set initial theme to dark if no saved preference
+            if (!localStorage.getItem('theme')) {
+                localStorage.setItem('theme', 'dark');
+            }
+            this.theme = localStorage.getItem('theme');
+            this.applyTheme();
+        }
+
+        toggleTheme() {
+            this.theme = this.theme === 'dark' ? 'light' : 'dark';
+            this.applyTheme();
+            localStorage.setItem('theme', this.theme);
+        }
+
+        applyTheme() {
+            // Update HTML attribute
+            document.documentElement.setAttribute('data-theme', this.theme);
             
-            // First toggle theme
-            const newTheme = isDark ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
+            // Update icons - show sun in dark mode, moon in light mode
+            const isDark = this.theme === 'dark';
+            sunIcon.style.display = isDark ? 'block' : 'none';
+            moonIcon.style.display = isDark ? 'none' : 'block';
             
-            // Then update icons based on new theme
-            // Show sun icon when in dark mode, moon icon when in light mode
-            const isNewThemeDark = newTheme === 'dark';
-            sunIcon.style.display = isNewThemeDark ? 'block' : 'none';
-            moonIcon.style.display = isNewThemeDark ? 'none' : 'block';
-            
-            // Reverse primary and secondary colors
+            // Update colors
             const root = document.documentElement;
-            const primaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
-            const secondaryColor = getComputedStyle(root).getPropertyValue('--secondary-color').trim();
+            if (this.theme === 'dark') {
+                // Dark mode: dark background, light text
+                root.style.setProperty('--primary-color', '#0D0D0D');
+                root.style.setProperty('--secondary-color', '#E0E0E0');
+            } else {
+                // Light mode: light background, dark text
+                root.style.setProperty('--primary-color', '#E0E0E0');
+                root.style.setProperty('--secondary-color', '#0D0D0D');
+            }
             
-            root.style.setProperty('--primary-color', secondaryColor);
-            root.style.setProperty('--secondary-color', primaryColor);
-            
-            // Save preferences
-            localStorage.setItem('theme', newTheme);
-            localStorage.setItem('primaryColor', secondaryColor);
-            localStorage.setItem('secondaryColor', primaryColor);
-        });
+            // Save color preferences
+            localStorage.setItem('primaryColor', getComputedStyle(root).getPropertyValue('--primary-color').trim());
+            localStorage.setItem('secondaryColor', getComputedStyle(root).getPropertyValue('--secondary-color').trim());
+        }
     }
 
-    // Language switching
-    if (langSwitch && langText) {
-        langSwitch.addEventListener('click', () => {
-            const isFrench = langText.textContent === 'FR';
-            langText.textContent = isFrench ? 'EN' : 'FR';
-            
-            // Save preference
-            localStorage.setItem('language', isFrench ? 'en' : 'fr');
-        });
-    }
+    // Initialize theme manager
+    const themeManager = new ThemeManager();
 
-    // Load saved preferences
-    const savedTheme = localStorage.getItem('theme');
-    const savedLang = localStorage.getItem('language');
-    const savedPrimaryColor = localStorage.getItem('primaryColor');
-    const savedSecondaryColor = localStorage.getItem('secondaryColor');
-
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        // Set initial icon state based on saved theme
-        const isDark = savedTheme === 'dark';
-        sunIcon.style.display = isDark ? 'block' : 'none';
-        moonIcon.style.display = isDark ? 'none' : 'block';
-    }
-
-    if (savedLang && langText) {
-        langText.textContent = savedLang === 'fr' ? 'FR' : 'EN';
-    }
-
-    // Restore color preferences if they exist
-    if (savedPrimaryColor && savedSecondaryColor) {
-        const root = document.documentElement;
-        root.style.setProperty('--primary-color', savedPrimaryColor);
-        root.style.setProperty('--secondary-color', savedSecondaryColor);
+    // Add click event listener
+    if (themeSwitch) {
+        themeSwitch.addEventListener('click', () => themeManager.toggleTheme());
     }
 }); 

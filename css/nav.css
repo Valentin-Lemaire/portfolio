@@ -89,7 +89,6 @@
 
 .switch-btn:hover {
     color: var(--accent-color);
-    transform: scale(1.1);
 }
 
 .lang-switch {
