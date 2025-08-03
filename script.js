@@ -1,75 +1,43 @@
-// Project details data
-const projectDetails = {
-    portfolio: {
-        title: "Portfolio Website",
-        description: "I made my own portfolio to showcase my projects and skills. (By the way, if you have any feedback, please let me know!)",
-        howToUse: [
-            "Click on any project card to see more details",
-            "Use the navigation buttons to explore different sections",
-            "Click on project links to visit GitHub repositories or live demos",
-            "Contact me through the provided email or social links"
-        ]
-    },
-    snake: {
-        title: "Snake AI",
-        description: "A classic Snake game implementation with an AI player trained using reinforcement learning. The AI learns to navigate the game board and collect food while avoiding collisions. (I have for project to soon remake an AI to play this using Pytorch with a neural network.)",
-        howToUse: [
-            "Click on the GitHub link to see the code",
-            "Run the game using Python and Pygame",
-            "Watch the AI play automatically or play yourself",
-            "View the training process and AI performance metrics"
-        ]
-    },
-    "double-pendulum": {
-        title: "Double Pendulum Simulation",
-        description: "A physics simulation of a double pendulum system, demonstrating chaotic motion and complex dynamics. The simulation accurately models the behavior of coupled oscillators. (Having multiple pendulums running at the same time with a slight offset at the beginning is a good way to see the chaotic motion and is really cool.)",
-        howToUse: [
-            "Click on the GitHub link to see the code",
-            "Run the simulation using Python",
-            "Adjust pendulum parameters using the interactive controls",
-            "Observe the chaotic motion patterns"
-        ]
-    },
-    boids: {
-        title: "Boids Simulation",
-        description: "An implementation of <a href='http://www.red3d.com/cwr/boids/' target='_blank' rel='noopener noreferrer'>Craig Reynolds' Boids algorithm</a>, simulating flocking behavior in birds. The simulation demonstrates emergent behavior from simple rules.",
-        howToUse: [
-            "Open the live demo in your web browser",
-            "Watch the boids flock naturally",
-            "Adjust flocking parameters using the controls"
-        ]
-    },
-    "game-of-life": {
-        title: "Conway's Game of Life",
-        description: "An implementation of <a href='https://conwaylife.com/' target='_blank' rel='noopener noreferrer'>Conway's Game of Life</a>, a cellular automaton that demonstrates complex patterns emerging from simple rules.",
-        howToUse: [
-            "Open the live demo in your web browser",
-            "Click on cells to create your initial pattern or use the random button",
-            "Use the controls to start/stop the simulation",
-            "Adjust the grid size and simulation speed"
-        ]
-    },
-    asteroids: {
-        title: "Asteroids Game",
-        description: "A recreation of the classic arcade game Asteroids. This project was a project I made in High School to learn Object Oriented Programming in Python. (The code is a bit messy, but it works and I don't see any reason to clean it up.)",
-        howToUse: [
-            "Click on the GitHub link to see the code",
-            "Run the game using Python and Pygame",
-            "Use arrow keys to control the ship",
-            "Spacebar to shoot asteroids",
-            "Try to achieve the highest score",
-            "Difficulty increases as you progress"
-        ]
-    },
-    "ai-image-gallery": {
-        title: "AI Image Gallery",
-        description: "I made an AI image gallery website using HTML, CSS and JavaScript. I used a '<a href='https://chatgpt.com/gpts' target='_blank' rel='noopener noreferrer'>GPT</a>', as <a href='https://openai.com/' target='_blank' rel='noopener noreferrer'>OpenAI</a> calls them, that I built myself to first generate complex and various prompts and then generated the images all at once.",
-        howToUse: [
-            "Open the live demo in your web browser",
-            "Click on the images to download them"
-        ]
+// Translation system
+let translations = {};
+let currentLanguage = 'en';
+
+// Load translations from JSON file
+async function loadTranslations() {
+    try {
+        const response = await fetch(`json/${currentLanguage}.json`);
+        translations = await response.json();
+        window.translations = translations; // Make translations available globally
+        applyTranslations();
+        window.translationsLoaded = true;
+    } catch (error) {
+        console.error('Error loading translations:', error);
+        window.translationsLoaded = true; // Set flag even on error to prevent infinite waiting
     }
-};
+}
+
+// Apply translations to all elements with data-translate attribute
+function applyTranslations() {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const value = getNestedValue(translations, key);
+        if (value) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = value;
+            } else {
+                element.innerHTML = value;
+            }
+        }
+    });
+}
+
+// Helper function to get nested object values using dot notation
+function getNestedValue(obj, path) {
+    return path.split('.').reduce((current, key) => {
+        return current && current[key] !== undefined ? current[key] : null;
+    }, obj);
+}
 
 // Cache DOM elements
 const modal = document.getElementById('projectModal');
@@ -81,14 +49,22 @@ const modalTech = modal.querySelector('.modal-tech');
 const modalHowToList = modal.querySelector('.modal-how-to ul');
 const modalLinks = modal.querySelector('.modal-links');
 
-// Function to update modal content
+// Function to update modal content using JSON data
 function updateModalContent(projectId) {
-    const project = projectDetails[projectId];
     const card = document.querySelector(`[data-project="${projectId}"]`);
     
+    // Get project data from translations
+    const projectKey = getProjectKey(projectId);
+    const projectData = getNestedValue(translations, `modal.${projectKey}`);
+    
+    if (!projectData) {
+        console.error(`Project data not found for: ${projectId}`);
+        return;
+    }
+    
     // Update modal content
-    modalTitle.textContent = project.title;
-    modalDescription.innerHTML = project.description;
+    modalTitle.innerHTML = projectData.title;
+    modalDescription.innerHTML = projectData.description;
     
     // Update tech stack
     const techStack = card.querySelector('.project-tech').cloneNode(true);
@@ -96,7 +72,7 @@ function updateModalContent(projectId) {
     modalTech.append(techStack);
     
     // Update how to use
-    modalHowToList.innerHTML = project.howToUse.map(instruction => `<li>${instruction}</li>`).join('');
+    modalHowToList.innerHTML = projectData.howToUse.map(instruction => `<li>${instruction}</li>`).join('');
     
     // Update links
     const links = card.querySelector('.project-links').cloneNode(true);
@@ -106,6 +82,20 @@ function updateModalContent(projectId) {
     // Update ARIA attributes
     modal.setAttribute('aria-labelledby', `modal-title-${projectId}`);
     modalTitle.id = `modal-title-${projectId}`;
+}
+
+// Helper function to map project IDs to JSON keys
+function getProjectKey(projectId) {
+    const keyMap = {
+        'portfolio': 'portfolio',
+        'snake': 'snake',
+        'double-pendulum': 'doublePendulum',
+        'boids': 'boids',
+        'game-of-life': 'gameOfLife',
+        'asteroids': 'asteroids',
+        'ai-image-gallery': 'aiImageGallery'
+    };
+    return keyMap[projectId] || projectId;
 }
 
 // Function to open modal
@@ -182,4 +172,9 @@ modal.addEventListener('keydown', (e) => {
             }
         }
     }
+});
+
+// Initialize the application
+document.addEventListener('DOMContentLoaded', () => {
+    loadTranslations();
 }); 

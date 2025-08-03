@@ -56,9 +56,9 @@
         <div class="nav-bar">
             <a href="#" class="nav-logo">VL</a>
             <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#about" class="nav-link" data-translate="nav.about"></a>
+                <a href="#projects" class="nav-link" data-translate="nav.projects"></a>
+                <a href="#contact" class="nav-link" data-translate="nav.contact"></a>
             </div>
             <div class="nav-switches">
                 <button class="switch-btn theme-switch" aria-label="Toggle theme">
@@ -88,42 +88,29 @@
         <!-- Header Section -->
         <header class="header">
             <div class="header-content">
-                <h1><span class="typing-text">Hi 👋, I'm Valentin</span></h1>
-                <p class="subtitle"><span class="typing-text">Aspiring Software Engineer</span></p>
+                <h1><span class="typing-text" data-translate="header.title"></span></h1>
+                <p class="subtitle"><span class="typing-text" data-translate="header.subtitle"></span></p>
                 <nav class="header-cta">
-                    <a href="#projects" class="cta-button typing-text">View My Work</a>
-                    <a href="#contact" class="cta-button secondary typing-text">Contact Me</a>
+                    <a href="#projects" class="cta-button typing-text" data-translate="header.viewWork"></a>
+                    <a href="#contact" class="cta-button secondary typing-text" data-translate="header.contactMe"></a>
                 </nav>
             </div>
         </header>
 
         <!-- About Section -->
         <section id="about" class="about-section" aria-label="About Me">
-            <h2>About Me</h2>
+            <h2 data-translate="about.title"></h2>
             <div class="about-grid">
                 <div class="about-bio">
-                    <p>
-                        My name is Valentin Lemaire, I'm 18 years old, and I'm from Lyon, France.
-                        <br><br>
-                        I'm a first-year engineering student at <a href="https://www.ece.fr/" target="_blank" rel="noopener noreferrer">ECE Lyon</a>, specializing in <strong>computer science</strong>.
-                        <br><br>
-                        I started coding at home in 2021, learning most of my technical skills independently.
-                        The only exceptions are Python, which I studied during my final year of high school, and low-level programming (C), which I'm currently learning as part of my engineering studies.
-                        My front-end web development skills are entirely self-taught.
-                        <br><br>
-                        Teaching myself to code has been both a challenge and a rewarding journey.
-                        I know that learning in the field of engineering never truly stops, as technology constantly evolves.
-                        However, through this experience, I've developed valuable skills for an engineer to have:
-                        the ability to <strong>learn independently</strong> and <strong>problem-solving skills</strong>.
-                        <br><br>
-                        By the way, to share a bit more about my interests and passions, I have a deep love for science and technology.
-                        My two favorite fields are <strong>computer science</strong> and <strong>aerospace</strong>,
-                        so I'm truly glad to be studying engineering, it's something I'm genuinely passionate about.
-                    </p>
+                    <p data-translate="about.bio.intro"></p>
+                    <p data-translate="about.bio.education"></p>
+                    <p data-translate="about.bio.learning"></p>
+                    <p data-translate="about.bio.experience"></p>
+                    <p data-translate="about.bio.interests"></p>
                 </div>
                 <div class="about-skills">
                     <div class="skill-category">
-                        <h3>Programming Languages</h3>
+                        <h3 data-translate="about.skills.programming.title"></h3>
                         <div class="skill-item">
                             <div class="skill-header">
                                 <h4><i class="fa-brands fa-python"></i> Python</h4>
@@ -131,7 +118,7 @@
                                     <div class="progress-bar" style="width: 80%"></div>
                                 </div>
                             </div>
-                            <p>I've learned Python in my last year of High School and I've used it for many projects since then.</p>
+                            <p data-translate="about.skills.programming.python"></p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-header">
@@ -140,7 +127,7 @@
                                     <div class="progress-bar" style="width: 30%"></div>
                                 </div>
                             </div>
-                            <p>I'm currently learning C in my engineering studies.</p>
+                            <p data-translate="about.skills.programming.c"></p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-header">  
@@ -149,11 +136,11 @@
                                     <div class="progress-bar" style="width: 35%"></div>
                                 </div>
                             </div>
-                            <p>I've learned some JavaScript by myself and have used it in various projects. I've also learned the basics of <a href="https://threejs.org/" target="_blank" rel="noopener noreferrer">Three.js</a> which is a library to make 3D graphics.</p>
+                            <p data-translate="about.skills.programming.javascript"></p>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Web Development</h3>
+                        <h3 data-translate="about.skills.web.title"></h3>
                         <div class="skill-item">
                             <div class="skill-header">
                                 <h4><i class="fa-brands fa-html5"></i> HTML5 & <i class="fa-brands fa-css3-alt"></i> CSS3</h4>
@@ -161,11 +148,11 @@
                                     <div class="progress-bar" style="width: 90%"></div>
                                 </div>
                             </div>
-                            <p>I've learned HTML5 and CSS3 by myself and I've improved over time by doing lots of personal projects.</p>
+                            <p data-translate="about.skills.web.htmlcss"></p>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
+                        <h3 data-translate="about.skills.tools.title"></h3>
                         <div class="skill-item">
                             <div class="skill-header">
                                 <h4><i class="fa-brands fa-git-alt"></i> Git</h4>
@@ -173,11 +160,11 @@
                                     <div class="progress-bar" style="width: 50%"></div>
                                 </div>
                             </div>
-                            <p>I've only recently started using Git and GitHub but I'm getting the hang of it.</p>
+                            <p data-translate="about.skills.tools.git"></p>
                         </div>
                         <div class="skill-item">
                             <h4>Vercel</h4>
-                            <p>I've used Vercel to deploy most of my web projects including this portfolio.</p>
+                            <p data-translate="about.skills.tools.vercel"></p>
                         </div>
                     </div>
                 </div>
@@ -186,7 +173,7 @@
 
         <!-- Projects Grid Section -->
         <section id="projects" class="projects-section" aria-label="My Projects">
-            <h2>My Projects</h2>
+            <h2 data-translate="projects.title"></h2>
             <div class="projects-grid">
                 <article class="project-card" data-project="portfolio">
                     <div class="project-image">
@@ -196,8 +183,8 @@
                         </picture>
                     </div>
                     <div class="project-content">
-                        <h3>Portfolio</h3>
-                        <p class="project-description">I made my own portfolio to showcase my projects and skills. (You're looking at it!)</p>
+                        <h3 data-translate="projects.portfolio.title"></h3>
+                        <p class="project-description" data-translate="projects.portfolio.description"></p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -219,8 +206,8 @@
                         </picture>
                     </div>
                     <div class="project-content">
-                        <h3>Snake AI</h3>
-                        <p class="project-description">I made a snake game using Python, Pygame and then I trained a Reinforcement Learning AI to play it.</p>
+                        <h3 data-translate="projects.snake.title"></h3>
+                        <p class="project-description" data-translate="projects.snake.description"></p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Pygame</span>
@@ -239,8 +226,8 @@
                         </picture>
                     </div>
                     <div class="project-content">
-                        <h3>Double Pendulum</h3>
-                        <p class="project-description">I made a double pendulum simulation using Python and Matplotlib.</p>
+                        <h3 data-translate="projects.doublePendulum.title"></h3>
+                        <p class="project-description" data-translate="projects.doublePendulum.description"></p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Matplotlib</span>
@@ -259,8 +246,8 @@
                         </picture>
                     </div>
                     <div class="project-content">
-                        <h3>Boids</h3>
-                        <p class="project-description">I made a boids simulation using JavaScript and HTML5 Canvas.</p>
+                        <h3 data-translate="projects.boids.title"></h3>
+                        <p class="project-description" data-translate="projects.boids.description"></p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -281,8 +268,8 @@
                         </picture>
                     </div>
                     <div class="project-content">
-                        <h3>Game of Life</h3>
-                        <p class="project-description">I made a Conway's Game of Life simulation using JavaScript and HTML5 Canvas.</p>
+                        <h3 data-translate="projects.gameOfLife.title"></h3>
+                        <p class="project-description" data-translate="projects.gameOfLife.description"></p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -303,8 +290,8 @@
                         </picture>
                     </div>
                     <div class="project-content">
-                        <h3>Asteroids</h3>
-                        <p class="project-description">I re-made the famous arcade game "Asteroids" using Python and Pygame.</p>
+                        <h3 data-translate="projects.asteroids.title"></h3>
+                        <p class="project-description" data-translate="projects.asteroids.description"></p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Pygame</span>
@@ -323,8 +310,8 @@
                         </picture>
                     </div>
                     <div class="project-content">
-                        <h3>AI Image Gallery</h3>
-                        <p class="project-description">I made an AI image gallery website using HTML, CSS and JavaScript.</p>
+                        <h3 data-translate="projects.aiImageGallery.title"></h3>
+                        <p class="project-description" data-translate="projects.aiImageGallery.description"></p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -349,7 +336,7 @@
                         <div class="modal-tech"></div>
                         <div class="modal-description"></div>
                         <div class="modal-how-to">
-                            <h3>How to Use</h3>
+                            <h3 data-translate="modal.howToUse"></h3>
                             <ul></ul>
                         </div>
                         <div class="modal-links"></div>
@@ -362,7 +349,7 @@
         <footer id="contact" class="footer">
             <div class="footer-content">
                 <div class="contact-info">
-                    <h3>Get in Touch</h3>
+                    <h3 data-translate="footer.title"></h3>
                     <p>Email: <a href="mailto:valentin.lemaire@edu.ece.fr">valentin.lemaire@edu.ece.fr</a></p>
                     <div class="social-links">
                         <a href="https://linkedin.com/in/valentin-lemaire-78b67a328/" target="_blank" rel="noopener noreferrer" class="social-icon">
@@ -376,9 +363,7 @@
                     </div>
                 </div>
                 <div class="resume-download">
-                    <a href="coming-soon.html" class="download-button">
-                        Download Resume
-                    </a>
+                    <a href="coming-soon.html" class="download-button" data-translate="footer.downloadResume"></a>
                 </div>
             </div>
             <div class="footer-bottom">

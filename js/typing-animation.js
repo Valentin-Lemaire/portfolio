@@ -22,6 +22,9 @@ class TypingAnimation {
     }
 
     async start() {
+        // Wait for translations to be loaded
+        await this.waitForTranslations();
+
         // Initially hide all elements
         this.texts.forEach(text => {
             text.style.opacity = '0';
@@ -35,7 +38,9 @@ class TypingAnimation {
         // Start typing each text element
         for (let i = 0; i < textElements.length; i++) {
             const text = textElements[i];
-            const originalText = text.textContent;
+            const translateKey = text.getAttribute('data-translate');
+            const originalText = this.getTextFromTranslations(translateKey) || text.textContent || text.innerText;
+            
             text.textContent = '';
             text.style.opacity = '1';
 
@@ -55,6 +60,34 @@ class TypingAnimation {
         buttons.forEach(button => {
             button.style.opacity = '1';
         });
+    }
+
+    // Get text from translations object
+    getTextFromTranslations(key) {
+        if (!window.translations || !key) {
+            return null;
+        }
+        
+        return key.split('.').reduce((current, k) => {
+            return current && current[k] !== undefined ? current[k] : null;
+        }, window.translations);
+    }
+
+    // Wait for translations to be loaded
+    async waitForTranslations() {
+        // Check if translations are already loaded
+        if (window.translationsLoaded) {
+            return;
+        }
+
+        // Wait for translations to be loaded (max 5 seconds)
+        let attempts = 0;
+        const maxAttempts = 100; // 5 seconds with 50ms intervals
+        
+        while (!window.translationsLoaded && attempts < maxAttempts) {
+            await this.sleep(50);
+            attempts++;
+        }
     }
 
     sleep(ms) {
