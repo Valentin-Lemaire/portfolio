@@ -93,7 +93,8 @@ function getProjectKey(projectId) {
         'boids': 'boids',
         'game-of-life': 'gameOfLife',
         'asteroids': 'asteroids',
-        'ai-image-gallery': 'aiImageGallery'
+        'ai-image-gallery': 'aiImageGallery',
+        'star-trail-simulation': 'starTrailSimulation'
     };
     return keyMap[projectId] || projectId;
 }

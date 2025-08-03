@@ -66,6 +66,10 @@
         "aiImageGallery": {
             "title": "AI Image Gallery",
             "description": "I made an AI image gallery website using HTML, CSS and JavaScript."
+        },
+        "starTrailSimulation": {
+            "title": "Star Trail Simulation",
+            "description": "I made a star trail simulation using JavaScript and HTML5 Canvas."
         }
     },
     "footer": {
@@ -141,6 +145,16 @@
             "howToUse": [
                 "Open the live demo in your web browser",
                 "Click on the images to download them"
+            ]
+        },
+        "starTrailSimulation": {
+            "title": "Star Trail Simulation",
+            "description": "I once saw a star trail photography and got interested by it. I did some research and learned that it was made by the stars moving in the sky (due to the rotation of the earth) captured with a long exposure. I thought it would be a good idea and quite easy to make a web simulation of it.",
+            "howToUse": [
+                "Open the live demo in your web browser",
+                "Watch the star trails move across the sky",
+                "On desktop you can scroll to change the speed of the simulation",
+                "By refreshing the page you can change the latitude of the simulated camera"
             ]
         }
     }
