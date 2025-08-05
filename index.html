@@ -103,9 +103,13 @@
             <div class="about-grid">
                 <div class="about-bio">
                     <p data-translate="about.bio.intro"></p>
+                    <br>
                     <p data-translate="about.bio.education"></p>
+                    <br>
                     <p data-translate="about.bio.learning"></p>
+                    <br>
                     <p data-translate="about.bio.experience"></p>
+                    <br>
                     <p data-translate="about.bio.interests"></p>
                 </div>
                 <div class="about-skills">
@@ -124,7 +128,7 @@
                             <div class="skill-header">
                                 <h4>C</h4>
                                 <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 30%"></div>
+                                    <div class="progress-bar" style="width: 50%"></div>
                                 </div>
                             </div>
                             <p data-translate="about.skills.programming.c"></p>
@@ -133,10 +137,28 @@
                             <div class="skill-header">  
                                 <h4><i class="fa-brands fa-js"></i> JavaScript</h4>
                                 <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 35%"></div>
+                                    <div class="progress-bar" style="width: 20%"></div>
                                 </div>
                             </div>
                             <p data-translate="about.skills.programming.javascript"></p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>OOP</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <p data-translate="about.skills.programming.OOP"></p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>CLI</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <p data-translate="about.skills.programming.CLI"></p>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -149,6 +171,39 @@
                                 </div>
                             </div>
                             <p data-translate="about.skills.web.htmlcss"></p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>Three.js</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 10%"></div>
+                                </div>
+                            </div>
+                            <p data-translate="about.skills.web.threejs"></p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4 data-translate="about.skills.web.SEO.title"></h4>
+                            </div>
+                            <p data-translate="about.skills.web.SEO.description"></p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4 data-translate="about.skills.web.responsiveDesign.title"></h4>
+                            </div>
+                            <p data-translate="about.skills.web.responsiveDesign.description"></p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4 data-translate="about.skills.web.webAccessibility.title"></h4>
+                            </div>
+                            <p data-translate="about.skills.web.webAccessibility.description"></p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4 data-translate="about.skills.web.performanceOptimization.title"></h4>
+                            </div>
+                            <p data-translate="about.skills.web.performanceOptimization.description"></p>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -163,8 +218,19 @@
                             <p data-translate="about.skills.tools.git"></p>
                         </div>
                         <div class="skill-item">
-                            <h4>Vercel</h4>
+                            <div class="skill-header">
+                                <h4>Vercel</h4>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 50%"></div>
+                                </div>
+                            </div>
                             <p data-translate="about.skills.tools.vercel"></p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h4>IDEs</h4>
+                            </div>
+                            <p data-translate="about.skills.tools.IDE"></p>
                         </div>
                     </div>
                 </div>
@@ -260,28 +326,6 @@
                     </div>
                 </article>
 
-                <article class="project-card" data-project="game-of-life">
-                    <div class="project-image">
-                        <picture>
-                            <source srcset="static/images/game-of-life.webp" type="image/webp">
-                            <img src="static/images/game-of-life.png" alt="Conway's Game of Life" loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-translate="projects.gameOfLife.title"></h3>
-                        <p class="project-description" data-translate="projects.gameOfLife.description"></p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://minimalist-game-of-life.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                            <a href="https://github.com/Valentin-Lemaire/game-of-life" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
                 <article class="project-card" data-project="asteroids">
                     <div class="project-image">
                         <picture>
@@ -298,28 +342,6 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Valentin-Lemaire/Asteroids" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card" data-project="ai-image-gallery">
-                    <div class="project-image">
-                        <picture>
-                            <source srcset="static/images/ai-image-gallery.webp" type="image/webp">
-                            <img src="static/images/ai-image-gallery.png" alt="AI image gallery" loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-translate="projects.aiImageGallery.title"></h3>
-                        <p class="project-description" data-translate="projects.aiImageGallery.description"></p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://ai-gallery-eta.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                            <a href="https://github.com/Valentin-Lemaire/AI-gallery" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
                 </article>

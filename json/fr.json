@@ -1,0 +1,135 @@
+{
+    "nav": {
+        "about": "À propos",
+        "projects": "Projets",
+        "contact": "Contact"
+    },
+    "header": {
+        "title": "Salut 👋, je suis Valentin",
+        "subtitle": "Étudiant en école d'ingénieur numérique",
+        "viewWork": "Voir mes projets",
+        "contactMe": "Me contacter"
+    },
+    "about": {
+        "title": "À propos",
+        "bio": {
+            "intro": "Je m'appelle Valentin Lemaire, j'ai 18 ans, et je suis de Lyon, en France.",
+            "education": "Je suis en seconde année d'école d'ingénieur à <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>l'ECE Lyon</a>, spécialisé dans <strong>le numérique</strong>.",
+            "learning": "J'ai commencé à codé à la maison en 2021, en apprenant par moi-même. La seule excepetion est le Python, que j'ai appris en terminale avec la spécialité NSI (Numérique et Science Informatique), et la programmation de bas niveau (avec le C), que j'ai appris en première année d'ecole d'ingénieur. Mes compétences en developpement web front-end sont entierement autodidactes.",
+            "experience": "Apprendre à codé par moi-même a été à la fois un challenge et récompensant. Je sais que dans le milieu de l'ingénieurie et particulierement en informatique, il y a toujours des nouvelle choses à apprendre, puisque la technologie est en constante evolution. Mais justement, du fait que j'ai commencé à coder en apprenant par moi-même j'ai développé des compétences importantes pour un ingénieur comme la capacité à <strong>apprendre indépendamment</strong> et <strong>la résolution de problèmes</strong>. En parlant de compétences acquises seules, je suis devenu doué en <strong>vulgarisation</strong> pour ce qui concerne les sujets un peu technique puisque aucun membre de ma famille ni la plus part des mes amis y connaissent quoi que ce soit. La vulgarisation est, pour moi, une compétence très importante pour un ingénieur lorsqu'il travaille avec des personnes non techniques.",
+            "interests": "D'ailleurs, pour parler un peu plus de mes interets et passions, j'ai un fort interet pour les sciences et la technologie. Mes deux domaines préférés sont <strong>l'informatique</strong> et <strong>l'aerospatial</strong>, c'est pourquoi je suis vraiment content de faire des études dans ce domaine."
+        },
+        "skills": {
+            "programming": {
+                "title": "Langages de Programmation",
+                "python": "J'ai appris le Python en terminale avec la spécialité NSI (Numérique et Science Informatique), et je l'ai utilisé dans de nombreux projets depuis.",
+                "c": "J'ai appris le C en première année d'école d'ingénieur.",
+                "javascript": "J'ai appris le JavaScript par moi-même et je l'ai utilisé dans plusieurs projets. J'ai aussi appris les bases de Three.js qui est une bibliothèque pour faire de la 3D en JavaScript."
+            },
+            "web": {
+                "title": "Développement Web",
+                "htmlcss": "J'ai appris le HTML5 et le CSS3 par moi-même et je me suis amélioré au fil du temps en faisant de nombreux projets personnels."
+            },
+            "tools": {
+                "title": "Outils & Technologies",
+                "git": "J'ai récemment commencé à utiliser Git et GitHub il y a peu, mais je commence à prendre la main.",
+                "vercel": "J'utilise Vercel pour héberger la plupart de mes projets web, y compris ce portfolio."
+            }
+        }
+    },
+    "projects": {
+        "title": "Mes Projets",
+        "portfolio": {
+            "title": "Portfolio",
+            "description": "J'ai fais mon propre portfolio pour présenter mes projets et mes compétences. (Vous êtes dessus !)"
+        },
+        "snake": {
+            "title": "IA Snake",
+            "description": "J'ai recodé le jeu Snake en Python, en utilisant Pygame et j'ai ensuite entrainé une IA pour y jouer."
+        },
+        "doublePendulum": {
+            "title": "Simulation de Double Pendule",
+            "description": "J'ai codé une simulation de double pendule en Python, en utilisant Matplotlib."
+        },
+        "boids": {
+            "title": "Simulation de Boids",
+            "description": "J'ai codé une simulation de Boids en utilisant JavaScript et HTML5 Canvas."
+        },
+        "asteroids": {
+            "title": "Asteroids",
+            "description": "J'ai recodé le jeu Asteroids en Python, en utilisant Pygame."
+        },
+        "starTrailSimulation": {
+            "title": "Simulation de Traînée d'Étoiles",
+            "description": "J'ai codé une simulation de traînée d'étoiles en utilisant JavaScript et HTML5 Canvas."
+        }
+    },
+    "footer": {
+        "title": "Me Contacter",
+        "downloadResume": "Télécharger mon CV"
+    },
+    "modal": {
+        "howToUse": "Comment Utiliser",
+        "portfolio": {
+            "title": "Portfolio",
+            "description": "J'ai codé mon propre portfolio pour présenter mes projets et mes compétences. (Par ailleurs, si vous avez des retours, n'hésitez pas à me le faire savoir !)",
+            "howToUse": [
+                "Cliquez sur n'importe quelle carte de projet pour voir plus de détails",
+                "Utilisez les boutons de navigation pour explorer différentes sections",
+                "Cliquez sur les liens des projets pour visiter les dépôts GitHub ou les démos en direct",
+                "Contactez-moi via l'email ou les liens sociaux fournis"
+            ]
+        },
+        "snake": {
+            "title": "IA Snake",
+            "description": "J'ai recodé le jeu Snake en Python, en utilisant Pygame et j'ai ensuite entrainé une IA pour y jouer.",
+            "howToUse": [
+                "Cliquez sur le lien GitHub pour voir le code",
+                "Exécutez le jeu en utilisant Python et Pygame",
+                "Regardez l'IA jouer automatiquement ou jouer vous-même",
+                "Voir le processus d'entrainement et les métriques de performance de l'IA"
+            ]
+        },
+        "doublePendulum": {
+            "title": "Simulation de Double Pendule",
+            "description": "J'ai codé une simulation de double pendule en Python, en utilisant Matplotlib.",
+            "howToUse": [
+                "Cliquez sur le lien GitHub pour voir le code",
+                "Exécutez la simulation en utilisant Python",
+                "Ajustez les paramètres du pendule en utilisant les contrôles interactifs",
+                "Observez les motifs de mouvement chaotique"
+            ]
+        },
+        "boids": {
+            "title": "Simulation de Boids",
+            "description": "J'ai codé une simulation de Boids en utilisant JavaScript et HTML5 Canvas.",
+            "howToUse": [
+                "Ouvrez la démo en direct dans votre navigateur web",
+                "Regardez les boids se regrouper naturellement",
+                "Ajustez les paramètres de regroupement en utilisant les contrôles"
+            ]
+        },
+        "asteroids": {
+            "title": "Asteroids",
+            "description": "J'ai recodé le jeu Asteroids en Python, en utilisant Pygame.",
+            "howToUse": [
+                "Cliquez sur le lien GitHub pour voir le code",
+                "Exécutez le jeu en utilisant Python et Pygame",
+                "Utilisez les flèches pour contrôler le vaisseau",
+                "Appuyez sur la barre d'espace pour tirer sur les astéroïdes",
+                "Essayez d'obtenir le meilleur score",
+                "La difficulté augmente au fur et à mesure que vous avancez"
+            ]
+        },
+        "starTrailSimulation": {
+            "title": "Simulation de Traînée d'Étoiles",
+            "description": "J'ai codé une simulation de traînée d'étoiles en utilisant JavaScript et HTML5 Canvas.",
+            "howToUse": [
+                "Ouvrez la démo en direct dans votre navigateur web",
+                "Regardez les traînées d'étoiles se déplacer dans le ciel",
+                "Sur ordinateur vous pouvez faire défiler pour changer la vitesse de la simulation",
+                "En rafraîchissant la page vous pouvez changer la latitude de la caméra simulée"
+            ]
+        }
+    }
+}

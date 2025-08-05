@@ -14,26 +14,46 @@
         "title": "About Me",
         "bio": {
             "intro": "My name is Valentin Lemaire, I'm 18 years old, and I'm from Lyon, France.",
-            "education": "I'm a first-year engineering student at <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>ECE Lyon</a>, specializing in <strong>computer science</strong>.",
-            "learning": "I started coding at home in 2021, learning most of my technical skills independently. The only exceptions are Python, which I studied during my final year of high school, and low-level programming (C), which I'm currently learning as part of my engineering studies. My front-end web development skills are entirely self-taught.",
-            "experience": "Teaching myself to code has been both a challenge and a rewarding journey. I know that learning in the field of engineering never truly stops, as technology constantly evolves. However, through this experience, I've developed valuable skills for an engineer to have: the ability to <strong>learn independently</strong> and <strong>problem-solving skills</strong>.",
-            "interests": "By the way, to share a bit more about my interests and passions, I have a deep love for science and technology. My two favorite fields are <strong>computer science</strong> and <strong>aerospace</strong>, so I'm truly glad to be studying engineering, it's something I'm genuinely passionate about."
+            "education": "I'm a second-year engineering student at <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>ECE Lyon</a>, specializing in <strong>computer science</strong>.",
+            "learning": "I started coding at home in 2021, learning most of my technical skills independently. The only exceptions are Python, which I studied during my final year of high school, and low-level programming (C), which I learned in my first year of engineering. My front-end web development skills are entirely self-taught.",
+            "experience": "Teaching myself to code has been both a challenge and a rewarding journey. I know that learning in the field of engineering never truly stops, as technology constantly evolves. However, through this experience, I've developed valuable skills for an engineer to have: the ability to <strong>learn independently</strong> and <strong>problem-solving skills</strong>. Speaking of self-taught skills, I've become great at <strong>popularization</strong> concerning complex subjects as none of my family members and most of my friends aren't familiar with them. Popularization is, in my opinion, a very important skill for an engineer to have when working with non-technical people.",
+            "interests": "By the way, to share a bit more about my interests and passions, I have a strong interest in science and technology. My two favorite fields are <strong>computer science</strong> and <strong>aerospace</strong>, that's why I'm truly glad to be studying engineering, it's something I'm genuinely passionate about."
         },
         "skills": {
             "programming": {
-                "title": "Programming Languages",
+                "title": "Programming",
                 "python": "I've learned Python in my last year of High School and I've used it for many projects since then.",
-                "c": "I'm currently learning C in my engineering studies.",
-                "javascript": "I've learned some JavaScript by myself and have used it in various projects. I've also learned the basics of Three.js which is a library to make 3D graphics."
+                "c": "I've learned C in my first year of engineering.",
+                "javascript": "I've learned some JavaScript by myself and have used it in various projects. I've also learned the basics of Three.js which is a library to make 3D graphics.",
+                "OOP": "I've learned the basics of Object Oriented Programming in Python to use it in medium-sized projects.",
+                "CLI": "I've learned the basics of the command line interface to use it on macOS since I'm a Mac user."
             },
             "web": {
                 "title": "Web Development",
-                "htmlcss": "I've learned HTML5 and CSS3 by myself and I've improved over time by doing lots of personal projects."
+                "htmlcss": "I've learned HTML5 and CSS3 by myself and I've improved over time by doing lots of personal projects.",
+                "threejs": "I've learned the basics of Three.js which is a library to make 3D graphics.",
+                "SEO": {
+                    "title": "SEO",
+                    "description": "I've learned the basics of SEO to make my portfolio more visible on search engines."
+                },
+                "responsiveDesign": {
+                    "title": "Responsive Design",
+                    "description": "I've learned responsive design to make my websites more accessible on all devices."
+                },
+                "webAccessibility": {
+                    "title": "Web Accessibility",
+                    "description": "I've learned web accessibility to make my websites more accessible to everyone."
+                },
+                "performanceOptimization": {
+                    "title": "Performance Optimization",
+                    "description": "I've learned performance optimization to make my portfolio more efficient and faster."
+                }
             },
             "tools": {
                 "title": "Tools & Technologies",
                 "git": "I've only recently started using Git and GitHub but I'm getting the hang of it.",
-                "vercel": "I've used Vercel to deploy most of my web projects including this portfolio."
+                "vercel": "I've used Vercel to deploy most of my web projects including this portfolio.",
+                "IDE": "I've used VSCode and many other IDEs to code my projects."
             }
         }
     },
@@ -41,7 +61,7 @@
         "title": "My Projects",
         "portfolio": {
             "title": "Portfolio",
-            "description": "I made my own portfolio to showcase my projects and skills. (You're looking at it!)"
+            "description": "I made my own portfolio to showcase my projects and skills. (You're looking at it !)"
         },
         "snake": {
             "title": "Snake AI",
@@ -49,23 +69,15 @@
         },
         "doublePendulum": {
             "title": "Double Pendulum Simulation",
-            "description": "I made a double pendulum simulation using Python and Matplotlib."
+            "description": "I made a simple double pendulum simulation using Python and Matplotlib."
         },
         "boids": {
             "title": "Boids Simulation",
-            "description": "I made a boids simulation using JavaScript and HTML5 Canvas."
-        },
-        "gameOfLife": {
-            "title": "Conway's Game of Life",
-            "description": "I made a Conway's Game of Life simulation using JavaScript and HTML5 Canvas."
+            "description": "I made a minimalistic boids simulation using JavaScript and HTML5 Canvas."
         },
         "asteroids": {
-            "title": "Asteroids Game",
+            "title": "Asteroids",
             "description": "I re-made the famous arcade game \"Asteroids\" using Python and Pygame."
-        },
-        "aiImageGallery": {
-            "title": "AI Image Gallery",
-            "description": "I made an AI image gallery website using HTML, CSS and JavaScript."
         },
         "starTrailSimulation": {
             "title": "Star Trail Simulation",
@@ -117,16 +129,6 @@
                 "Adjust flocking parameters using the controls"
             ]
         },
-        "gameOfLife": {
-            "title": "Conway's Game of Life",
-            "description": "An implementation of <a href='https://conwaylife.com/' target='_blank' rel='noopener noreferrer'>Conway's Game of Life</a>, a cellular automaton that demonstrates complex patterns emerging from simple rules.",
-            "howToUse": [
-                "Open the live demo in your web browser",
-                "Click on cells to create your initial pattern or use the random button",
-                "Use the controls to start/stop the simulation",
-                "Adjust the grid size and simulation speed"
-            ]
-        },
         "asteroids": {
             "title": "Asteroids Game",
             "description": "A recreation of the classic arcade game Asteroids. This project was a project I made in High School to learn Object Oriented Programming in Python. (The code is a bit messy, but it works and I don't see any reason to clean it up.)",
@@ -137,14 +139,6 @@
                 "Spacebar to shoot asteroids",
                 "Try to achieve the highest score",
                 "Difficulty increases as you progress"
-            ]
-        },
-        "aiImageGallery": {
-            "title": "AI Image Gallery",
-            "description": "I made an AI image gallery website using HTML, CSS and JavaScript. I used a '<a href='https://chatgpt.com/gpts' target='_blank' rel='noopener noreferrer'>GPT</a>', as <a href='https://openai.com/' target='_blank' rel='noopener noreferrer'>OpenAI</a> calls them, that I built myself to first generate complex and various prompts and then generated the images all at once.",
-            "howToUse": [
-                "Open the live demo in your web browser",
-                "Click on the images to download them"
             ]
         },
         "starTrailSimulation": {

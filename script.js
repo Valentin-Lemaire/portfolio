@@ -91,9 +91,7 @@ function getProjectKey(projectId) {
         'snake': 'snake',
         'double-pendulum': 'doublePendulum',
         'boids': 'boids',
-        'game-of-life': 'gameOfLife',
         'asteroids': 'asteroids',
-        'ai-image-gallery': 'aiImageGallery',
         'star-trail-simulation': 'starTrailSimulation'
     };
     return keyMap[projectId] || projectId;
