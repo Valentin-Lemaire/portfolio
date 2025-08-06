@@ -16,12 +16,37 @@ A modern, responsive portfolio website showcasing my projects, skills, and profe
 portfolio/
 ├── index.html          # Main portfolio page
 ├── coming-soon.html    # Coming soon page
+├── css/               # Stylesheets
+│   ├── base.css       # Base styles
+│   ├── header.css     # Header styles
+│   ├── nav.css        # Navigation styles
+│   ├── about.css      # About section styles
+│   ├── projects.css   # Projects section styles
+│   ├── modal.css      # Modal styles
+│   ├── footer.css     # Footer styles
+│   ├── responsive.css # Responsive design
+│   ├── fonts.css      # Font definitions
+│   └── mouse-effect.css # Custom cursor effects
+├── js/                # JavaScript modules
+│   ├── nav.js         # Navigation functionality
+│   ├── typing-animation.js # Typing animation
+│   ├── three-background.js # 3D background
+│   └── mouse-effect.js # Custom cursor
+├── json/              # Translation files
+│   ├── en.json        # English translations
+│   └── fr.json        # French translations
 ├── static/            # Static assets
-│   ├── vl.png        # Favicon
-│   └── *.png         # Project screenshots
-├── style.css         # Main stylesheet
-├── sitemap.xml       # SEO sitemap
-└── robots.txt        # Search engine crawler rules
+│   ├── images/        # Project screenshots
+│   │   ├── vl.png     # Favicon
+│   │   └── *.webp     # Optimized project images
+│   └── fonts/         # Custom fonts
+├── script.js          # Main script (translations, modals)
+├── style.css          # Main stylesheet
+├── footer.css         # Additional footer styles
+├── sitemap.xml        # SEO sitemap
+├── robots.txt         # Search engine crawler rules
+├── package.json       # Dependencies
+└── convert_to_webp.py # Image optimization script
 ```
 
 ## Getting Started

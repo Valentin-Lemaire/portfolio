@@ -56,6 +56,7 @@
 .cta-button {
     padding: 1rem 1.5rem;
     border-radius: 5px;
+    border: 2px solid var(--accent-color);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -64,17 +65,79 @@
     justify-content: center;
     line-height: 1;
     font-family: var(--body-font);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes primaryButtonWave {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes primaryButtonText {
+    0% {
+        color: var(--primary-color);
+    }
+    50% {
+        color: var(--accent-color);
+    }
+    100% {
+        color: var(--primary-color);
+    }
 }
 
 .cta-button:first-child {
-    background-color: var(--accent-color);
+    background-color: transparent;
     color: var(--primary-color);
+    position: relative;
+}
+
+.cta-button:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    z-index: -1;
+}
+
+.cta-button:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+.cta-button:first-child:hover::after {
+    animation: primaryButtonWave 0.5s ease forwards;
+}
+
+.cta-button:first-child:hover {
+    animation: primaryButtonText 0.5s ease forwards;
 }
 
 .cta-button.secondary {
     background-color: transparent;
-    border: 2px solid var(--accent-color);
     color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .typing-text {
