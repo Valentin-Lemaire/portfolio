@@ -137,10 +137,6 @@
         font-size: 0.7rem;
     }
 
-    .nav-logo {
-        /* Logo size adjusted for medium screens */
-    }
-    
     .logo-image {
         height: 1.6rem;
     }
@@ -163,10 +159,6 @@
         font-size: 0.8rem;
     }
 
-    .nav-logo {
-        /* Logo size adjusted for small screens */
-    }
-    
     .logo-image {
         height: 1.4rem;
     }
