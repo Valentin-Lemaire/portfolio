@@ -15,7 +15,6 @@ A modern, responsive portfolio website showcasing my projects, skills, and profe
 ```
 portfolio/
 ├── index.html          # Main portfolio page
-├── coming-soon.html    # Coming soon page
 ├── css/               # Stylesheets
 │   ├── base.css       # Base styles
 │   ├── header.css     # Header styles

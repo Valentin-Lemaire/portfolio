@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /coming-soon.html
+
 Allow: /static/
 Sitemap: https://valentin-lemaire.vercel.app/sitemap.xml 
