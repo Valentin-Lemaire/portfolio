@@ -1,6 +1,29 @@
 // Translation system
 let translations = {};
-let currentLanguage = 'en';
+let currentLanguage = determineInitialLanguage();
+
+document.documentElement.setAttribute('lang', currentLanguage);
+window.getCurrentLanguage = () => currentLanguage;
+window.setLanguage = function setLanguage(newLanguage) {
+    const normalized = (newLanguage || '').toLowerCase();
+    if (normalized !== 'en' && normalized !== 'fr') {
+        return;
+    }
+    if (normalized === currentLanguage) {
+        return;
+    }
+    currentLanguage = normalized;
+    localStorage.setItem('lang', currentLanguage);
+    document.documentElement.setAttribute('lang', currentLanguage);
+    // Reload and apply translations for the newly selected language
+    loadTranslations().then(() => {
+        // If a modal is open, refresh its content in the new language
+        const modalEl = document.getElementById('projectModal');
+        if (modalEl && modalEl.classList.contains('active') && window.currentProjectId) {
+            updateModalContent(window.currentProjectId);
+        }
+    });
+};
 
 // Load translations from JSON file
 async function loadTranslations() {
@@ -37,6 +60,18 @@ function getNestedValue(obj, path) {
     return path.split('.').reduce((current, key) => {
         return current && current[key] !== undefined ? current[key] : null;
     }, obj);
+}
+
+function determineInitialLanguage() {
+    const savedLanguage = (localStorage.getItem('lang') || '').toLowerCase();
+    if (savedLanguage === 'en' || savedLanguage === 'fr') {
+        return savedLanguage;
+    }
+    const browserLanguage = ((navigator.language || navigator.userLanguage || '') + '').toLowerCase();
+    if (browserLanguage.startsWith('fr')) {
+        return 'fr';
+    }
+    return 'en';
 }
 
 // Cache DOM elements
@@ -103,12 +138,14 @@ function openModal(projectId) {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     modalCloseBtn.focus(); // Focus the close button for accessibility
+    window.currentProjectId = projectId;
 }
 
 // Function to close modal
 function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
+    window.currentProjectId = null;
 }
 
 // Event listeners
@@ -175,5 +212,7 @@ modal.addEventListener('keydown', (e) => {
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
+    // Ensure language attribute is in sync and load translations
+    document.documentElement.setAttribute('lang', currentLanguage);
     loadTranslations();
 }); 

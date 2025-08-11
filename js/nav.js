@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sunIcon = themeSwitch.querySelector('.sun-icon');
     const moonIcon = themeSwitch.querySelector('.moon-icon');
 
+    // Language switching functionality
+    const langSwitch = document.querySelector('.lang-switch');
+
     // Theme management class
     class ThemeManager {
         constructor() {
@@ -54,5 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add click event listener
     if (themeSwitch) {
         themeSwitch.addEventListener('click', () => themeManager.toggleTheme());
+    }
+
+    // Language toggle handler
+    if (langSwitch) {
+        langSwitch.addEventListener('click', () => {
+            const getLang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
+            const newLang = getLang === 'en' ? 'fr' : 'en';
+            if (typeof window.setLanguage === 'function') {
+                window.setLanguage(newLang);
+            }
+        });
     }
 }); 

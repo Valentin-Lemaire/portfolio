@@ -2,7 +2,8 @@
     "nav": {
         "about": "About",
         "projects": "Projects",
-        "contact": "Contact"
+        "contact": "Contact",
+        "lang": "FR"
     },
     "header": {
         "title": "Hi 👋, I'm Valentin",
@@ -116,7 +117,7 @@
             "howToUse": [
                 "Click on the GitHub link to see the code",
                 "Run the simulation using Python",
-                "Adjust pendulum parameters using the interactive controls",
+                "Adjust pendulum parameters using the code editor",
                 "Observe the chaotic motion patterns"
             ]
         },
