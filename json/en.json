@@ -17,7 +17,7 @@
             "intro": "My name is Valentin Lemaire, I'm 18 years old, and I'm from Lyon, France.",
             "education": "I'm a second-year engineering student at <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>ECE Lyon</a>, specializing in <strong>computer science</strong>.",
             "learning": "I started coding at home in 2021, learning most of my technical skills independently. The only exceptions are Python, which I studied during my final year of high school, and low-level programming (C), which I learned in my first year of engineering. My front-end web development skills are entirely self-taught.",
-            "experience": "Teaching myself to code has been both a challenge and a rewarding journey. I know that learning in the field of engineering never truly stops, as technology constantly evolves. However, through this experience, I've developed valuable skills for an engineer to have: the ability to <strong>learn independently</strong> and <strong>problem-solving skills</strong>. Speaking of self-taught skills, I've become great at <strong>popularization</strong> concerning complex subjects as none of my family members and most of my friends aren't familiar with them. Popularization is, in my opinion, a very important skill for an engineer to have when working with non-technical people.",
+            "experience": "Teaching myself to code has been both a challenge and a rewarding journey. I know that learning in the field of engineering never truly stops, as technology constantly evolves. However, through this experience, I've developed valuable skills for an engineer to have: the ability to <strong>learn independently</strong> and <strong>problem-solving skills</strong>. Speaking of self-taught skills, I've become great at <strong>popularization</strong> concerning complex subjects as none of my family members and most of my friends aren't familiar with them. Popularization is, in my opinion, an important skill for an engineer to have when working with non-technical people.",
             "interests": "By the way, to share a bit more about my interests and passions, I have a strong interest in science and technology. My two favorite fields are <strong>computer science</strong> and <strong>aerospace</strong>, that's why I'm truly glad to be studying engineering, it's something I'm genuinely passionate about."
         },
         "skills": {
@@ -32,7 +32,6 @@
             "web": {
                 "title": "Web Development",
                 "htmlcss": "I've learned HTML5 and CSS3 by myself and I've improved over time by doing lots of personal projects.",
-                "threejs": "I've learned the basics of Three.js which is a library to make 3D graphics.",
                 "SEO": {
                     "title": "SEO",
                     "description": "I've learned the basics of SEO to make my portfolio more visible on search engines."
@@ -60,6 +59,7 @@
     },
     "projects": {
         "title": "My Projects",
+        "subtitle": "You can click on any project card to see more details",
         "portfolio": {
             "title": "Portfolio",
             "description": "I made my own portfolio to showcase my projects and skills. (You're looking at it !)"
@@ -117,7 +117,6 @@
             "howToUse": [
                 "Click on the GitHub link to see the code",
                 "Run the simulation using Python",
-                "Adjust pendulum parameters using the code editor",
                 "Observe the chaotic motion patterns"
             ]
         },
@@ -147,7 +146,7 @@
             "description": "I once saw a star trail photography and got interested by it. I did some research and learned that it was made by the stars moving in the sky (due to the rotation of the earth) captured with a long exposure. I thought it would be a good idea and quite easy to make a web simulation of it.",
             "howToUse": [
                 "Open the live demo in your web browser",
-                "Watch the star trails move across the sky",
+                "Watch the stars move across the sky",
                 "On desktop you can scroll to change the speed of the simulation",
                 "By refreshing the page you can change the latitude of the simulated camera"
             ]
