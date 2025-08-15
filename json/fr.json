@@ -25,6 +25,7 @@
                 "title": "Programmation",
                 "python": "J'ai appris Python en terminale et je l'ai utilisé pour de nombreux projets depuis.",
                 "c": "J'ai appris C en première année de prépa intégrée.",
+                "c++": "J'ai appris C++ en première année de prépa intégrée.",
                 "javascript": "J'ai appris JavaScript par moi-même et je l'ai utilisé dans de nombreux projets. J'ai également appris les bases de Three.js, une bibliothèque pour faire des graphiques 3D.",
                 "OOP": "J'ai appris les bases de la programmation orientée objet en Python pour les utiliser dans des projets de taille moyenne.",
                 "CLI": "J'ai appris les bases de l'interface de ligne de commande pour l'utiliser sur macOS puisque je suis un utilisateur Mac."

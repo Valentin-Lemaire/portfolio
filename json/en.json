@@ -25,6 +25,7 @@
                 "title": "Programming",
                 "python": "I've learned Python in my last year of High School and I've used it for many projects since then.",
                 "c": "I've learned C in my first year of engineering.",
+                "c++": "I've learned C++ in my first year of engineering.",
                 "javascript": "I've learned some JavaScript by myself and have used it in various projects. I've also learned the basics of Three.js which is a library to make 3D graphics.",
                 "OOP": "I've learned the basics of Object Oriented Programming in Python to use it in medium-sized projects.",
                 "CLI": "I've learned the basics of the command line interface to use it on macOS since I'm a Mac user."
