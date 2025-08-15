@@ -127,7 +127,8 @@ function getProjectKey(projectId) {
         'double-pendulum': 'doublePendulum',
         'boids': 'boids',
         'asteroids': 'asteroids',
-        'star-trail-simulation': 'starTrailSimulation'
+        'star-trail-simulation': 'starTrailSimulation',
+        '2D-game': '2DGame'
     };
     return keyMap[projectId] || projectId;
 }

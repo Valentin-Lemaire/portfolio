@@ -83,6 +83,10 @@
         "starTrailSimulation": {
             "title": "Simulation de Traînée d'Étoile",
             "description": "J'ai codé une simulation de traînée d'étoile en utilisant JavaScript et HTML5 Canvas."
+        },
+        "2DGame": {
+            "title": "Jeu 2D",
+            "description": "J'ai commencé à coder un jeu 2D en utilisant C++ et Allegro."
         }
     },
     "footer": {
@@ -149,6 +153,15 @@
                 "Regardez les étoiles se déplacer dans le ciel",
                 "Sur ordinateur, vous pouvez utiliser la molette de la souris pour changer la vitesse de la simulation",
                 "En actualisant la page, vous pouvez changer la latitude de la caméra simulée"
+            ]
+        },
+        "2DGame": {
+            "title": "Jeu 2D",
+            "description": "J'ai commencé à coder un jeu 2D en utilisant C++ et Allegro. Pour l'instant, il fonctionne mais il n'y a rien à faire.",
+            "howToUse": [
+                "Cliquez sur le lien GitHub pour voir le code",
+                "Lancez le jeu en utilisant C++ et Allegro",
+                "Utilisez W, A, S, D pour déplacer le joueur et I, O pour zoomer et dézoomer"
             ]
         }
     }

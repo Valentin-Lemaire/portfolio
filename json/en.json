@@ -83,6 +83,10 @@
         "starTrailSimulation": {
             "title": "Star Trail Simulation",
             "description": "I made a star trail simulation using JavaScript and HTML5 Canvas."
+        },
+        "2DGame": {
+            "title": "2D Game",
+            "description": "I started a 2D game using C++ and Allegro."
         }
     },
     "footer": {
@@ -149,6 +153,15 @@
                 "Watch the stars move across the sky",
                 "On desktop you can scroll to change the speed of the simulation",
                 "By refreshing the page you can change the latitude of the simulated camera"
+            ]
+        },
+        "2DGame": {
+            "title": "2D Game",
+            "description": "I started a 2D game using C++ and Allegro. I'm still working on it. Currently, it works but there is nothing to do yet.",
+            "howToUse": [
+                "Click on the GitHub link to see the code",
+                "Run the game using C++ and Allegro",
+                "Use W, A, S, D to move the player and I, O to zoom in and out"
             ]
         }
     }
