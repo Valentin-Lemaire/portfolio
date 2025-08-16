@@ -5,7 +5,7 @@ A modern, responsive portfolio website showcasing my projects, skills, and profe
 ## Technologies Used
 
 - HTML5
-- CSS3
+- SCSS/CSS3
 - JavaScript
 - Font Awesome Icons
 - Vercel (Hosting)
@@ -15,37 +15,40 @@ A modern, responsive portfolio website showcasing my projects, skills, and profe
 ```
 portfolio/
 ├── index.html          # Main portfolio page
-├── css/               # Stylesheets
-│   ├── base.css       # Base styles
-│   ├── header.css     # Header styles
-│   ├── nav.css        # Navigation styles
-│   ├── about.css      # About section styles
-│   ├── projects.css   # Projects section styles
-│   ├── modal.css      # Modal styles
-│   ├── footer.css     # Footer styles
-│   ├── responsive.css # Responsive design
-│   ├── fonts.css      # Font definitions
-│   └── mouse-effect.css # Custom cursor effects
-├── js/                # JavaScript modules
-│   ├── nav.js         # Navigation functionality
+├── scss/               # SCSS source files
+│   ├── style.scss      # Main SCSS file (imports all partials)
+│   ├── _base.scss      # Base styles
+│   ├── _header.scss    # Header styles
+│   ├── _nav.scss       # Navigation styles
+│   ├── _about.scss     # About section styles
+│   ├── _projects.scss  # Projects section styles
+│   ├── _modal.scss     # Modal styles
+│   ├── _footer.scss    # Footer styles
+│   ├── _responsive.scss # Responsive design
+│   ├── _fonts.scss     # Font definitions
+│   └── _mouse-effect.scss # Custom cursor effects
+├── css/                # Compiled CSS files
+│   ├── style.css       # Compiled main stylesheet
+│   └── style.css.map   # Source map for debugging
+├── js/                 # JavaScript modules
+│   ├── nav.js          # Navigation functionality
 │   ├── typing-animation.js # Typing animation
 │   ├── three-background.js # 3D background
 │   └── mouse-effect.js # Custom cursor
-├── json/              # Translation files
-│   ├── en.json        # English translations
-│   └── fr.json        # French translations
-├── static/            # Static assets
-│   ├── images/        # Project screenshots
-│   │   ├── vl.png     # Favicon
-│   │   └── *.webp     # Optimized project images
-│   └── fonts/         # Custom fonts
-├── script.js          # Main script (translations, modals)
-├── style.css          # Main stylesheet
-├── footer.css         # Additional footer styles
-├── sitemap.xml        # SEO sitemap
-├── robots.txt         # Search engine crawler rules
-├── package.json       # Dependencies
-└── convert_to_webp.py # Image optimization script
+├── json/               # Translation files
+│   ├── en.json         # English translations
+│   └── fr.json         # French translations
+├── static/             # Static assets
+│   ├── images/         # Project screenshots
+│   │   ├── vl.png      # Favicon
+│   │   └── *.webp      # Optimized project images
+│   └── fonts/          # Custom fonts
+├── script.js           # Main script (translations, modals)
+├── footer.css          # Additional footer styles
+├── sitemap.xml         # SEO sitemap
+├── robots.txt          # Search engine crawler rules
+├── package.json        # Dependencies
+└── convert_to_webp.py  # Image optimization script
 ```
 
 ## Getting Started
