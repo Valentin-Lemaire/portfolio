@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 * {
     cursor: none;
 }
@@ -12,6 +14,14 @@
     z-index: 9999;
     transition: transform 0.2s ease;
     transform: translate(-50%, -50%);
+
+    &.hover {
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    @include respond-to(medium) {
+        display: none;
+    }
 }
 
 .cursor2 {
@@ -24,19 +34,12 @@
     z-index: 9999;
     transition: transform 0.2s ease;
     transform: translate(-50%, -50%);
-}
 
-.cursor.hover{
-    transform: translate(-50%, -50%) scale(2);
-}
+    &.hover {
+        transform: translate(-50%, -50%);
+    }
 
-.cursor2.hover{
-    transform: translate(-50%, -50%);
-}
-
-/* Hide the custom cursor on mobile devices */
-@media (max-width: 768px) {
-    .cursor, .cursor2 {
+    @include respond-to(medium) {
         display: none;
     }
-} 
+}

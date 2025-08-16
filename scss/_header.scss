@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 /* Header styles */
 .header {
     position: relative;
@@ -7,6 +9,35 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+        @include respond-to(medium) {
+            font-size: 2.5rem;
+        }
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+
+        @include respond-to(medium) {
+            font-size: 1.2rem;
+        }
+    }
+
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
 }
 
 #headerBackground {
@@ -26,47 +57,14 @@
     padding: 2rem;
 }
 
-.header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.header .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-.header canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
 .header-cta {
     display: flex;
     gap: 1rem;
     justify-content: center;
-}
 
-.cta-button {
-    padding: 1rem 1.5rem;
-    border-radius: 5px;
-    border: 2px solid var(--accent-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    font-family: var(--body-font);
-    position: relative;
-    overflow: hidden;
+    @include respond-to(medium) {
+        flex-direction: column;
+    }
 }
 
 @keyframes primaryButtonWave {
@@ -93,55 +91,80 @@
     }
 }
 
-.cta-button:first-child {
-    background-color: transparent;
-    color: var(--primary-color);
-    position: relative;
-}
-
-.cta-button:first-child::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color);
-    z-index: -1;
-}
-
-.cta-button:first-child::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    z-index: -1;
-}
-
-.cta-button:first-child:hover::after {
-    animation: primaryButtonWave 0.5s ease forwards;
-}
-
-.cta-button:first-child:hover {
-    animation: primaryButtonText 0.5s ease forwards;
-}
-
-.cta-button.secondary {
-    background-color: transparent;
-    color: var(--accent-color);
+.cta-button {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
     transition: all 0.3s ease;
-}
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-family: var(--body-font);
+    position: relative;
+    overflow: hidden;
 
-.cta-button.secondary:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    &:first-child {
+        background-color: transparent;
+        color: var(--primary-color);
+        position: relative;
+    }
+
+    &:first-child::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--accent-color);
+        z-index: -1;
+    }
+
+    &:first-child::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color);
+        z-index: -1;
+    }
+
+    &:first-child:hover::after {
+        animation: primaryButtonWave 0.5s ease forwards;
+    }
+
+    &:first-child:hover {
+        animation: primaryButtonText 0.5s ease forwards;
+    }
+
+    &.secondary {
+        background-color: transparent;
+        color: var(--accent-color);
+        transition: all 0.3s ease;
+    }
+
+    &.secondary:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+    }
+
+    @include respond-to(medium) {
+        opacity: 1 !important;
+    }
 }
 
 .typing-text {
     display: inline-block;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+
+    @include respond-to(medium) {
+        opacity: 1 !important;
+        display: inline-block;
+    }
 }

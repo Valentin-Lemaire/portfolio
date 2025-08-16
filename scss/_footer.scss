@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 /* Footer styles */
 .footer {
     background-color: var(--primary-color);
@@ -25,21 +27,23 @@
     gap: 2rem;
 }
 
-.contact-info h3 {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+.contact-info {
+    h3 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 
-.contact-info a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 400;
-}
+    a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 400;
 
-.contact-info a:hover {
-    color: var(--accent-color);
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
 }
 
 .download-button {
@@ -52,11 +56,11 @@
     border: 1px solid var(--accent-color);
     transition: all 0.3s ease;
     font-weight: 500;
-}
 
-.download-button:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    &:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+    }
 }
 
 .footer-bottom {
@@ -79,8 +83,8 @@
     color: var(--secondary-color);
     font-size: 1.5rem;
     transition: color 0.3s ease;
-}
 
-.social-icon:hover {
-    color: var(--accent-color);
+    &:hover {
+        color: var(--accent-color);
+    }
 } 

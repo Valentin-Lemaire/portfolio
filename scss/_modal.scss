@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 /* Modal styles */
 .modal {
     display: none;
@@ -10,11 +12,11 @@
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
 
-.modal.active {
-    display: flex;
-    opacity: 1;
+    &.active {
+        display: flex;
+        opacity: 1;
+    }
 }
 
 .modal-content {
@@ -53,33 +55,53 @@
     border-radius: 50%;
     transition: all 0.3s ease;
     font-family: var(--heading-font);
-}
 
-.modal-close:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    &:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+    }
 }
 
 .modal-body {
     padding: 2rem;
     overflow-y: auto;
     max-height: 90vh;
+
+    a:not(.project-link) {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 400;
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+
+    @include respond-to(medium) {
+        padding: 1rem;
+    }
 }
 
 .modal-details {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
 
-.modal-details h2 {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    margin: 0;
-    padding-right: 3rem;
-    word-wrap: break-word;
-    line-height: 1.3;
-    font-weight: 700;
+    h2 {
+        font-size: 2rem;
+        color: var(--secondary-color);
+        margin: 0;
+        padding-right: 3rem;
+        word-wrap: break-word;
+        line-height: 1.3;
+        font-weight: 700;
+
+        @include respond-to(medium) {
+            font-size: 1.75rem;
+            padding-right: 2.5rem;
+        }
+    }
 }
 
 .modal-tech {
@@ -96,67 +118,45 @@
     font-weight: 400;
 }
 
-.modal-how-to h3 {
-    font-size: 1.25rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
+.modal-how-to {
+    h3 {
+        font-size: 1.25rem;
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
 
-.modal-how-to ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.modal-how-to li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--secondary-color);
-    opacity: 0.8;
-    font-weight: 400;
-}
+    li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--secondary-color);
+        opacity: 0.8;
+        font-weight: 400;
 
-.modal-how-to li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
+        &::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+    }
 }
 
 .modal-links {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-}
 
-.modal-links .project-link {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-/* Style for regular links in modal (not project links) */
-.modal-body a:not(.project-link) {
-    color: var(--secondary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 400;
-}
-
-.modal-body a:not(.project-link):hover {
-    color: var(--accent-color);
-}
-
-/* Responsive design for modal */
-@media (max-width: 768px) {
-    .modal-body {
-        padding: 1rem;
+    .project-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 500;
     }
-
-    .modal-details h2 {
-        font-size: 1.75rem;
-        padding-right: 2.5rem;
-    }
-} 
+}
