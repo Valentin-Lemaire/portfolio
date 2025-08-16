@@ -14,32 +14,32 @@ A modern, responsive portfolio website showcasing my projects, skills, and profe
 
 ```
 portfolio/
-├── index.html          # Main portfolio page
+├── index.html          # Main page
 ├── scss/               # SCSS source files
 │   ├── style.scss      # Main SCSS file (imports all partials)
-│   ├── _base.scss      # Base styles
-│   ├── _header.scss    # Header styles
-│   ├── _nav.scss       # Navigation styles
-│   ├── _about.scss     # About section styles
-│   ├── _projects.scss  # Projects section styles
-│   ├── _modal.scss     # Modal styles
-│   ├── _footer.scss    # Footer styles
-│   ├── _responsive.scss # Responsive design
-│   ├── _fonts.scss     # Font definitions
-│   └── _mouse-effect.scss # Custom cursor effects
+│   ├── _base.scss
+│   ├── _header.scss
+│   ├── _mixins.scss
+│   ├── _nav.scss
+│   ├── _about.scss
+│   ├── _projects.scss
+│   ├── _modal.scss
+│   ├── _footer.scss
+│   ├── _fonts.scss
+│   └── _mouse-effect.scss
 ├── css/                # Compiled CSS files
 │   ├── style.css       # Compiled main stylesheet
 │   └── style.css.map   # Source map for debugging
 ├── js/                 # JavaScript modules
-│   ├── nav.js          # Navigation functionality
-│   ├── typing-animation.js # Typing animation
-│   ├── three-background.js # 3D background
-│   └── mouse-effect.js # Custom cursor
+│   ├── nav.js
+│   ├── typing-animation.js
+│   ├── three-background.js
+│   └── mouse-effect.js
 ├── json/               # Translation files
-│   ├── en.json         # English translations
-│   └── fr.json         # French translations
+│   ├── en.json
+│   └── fr.json
 ├── static/             # Static assets
-│   ├── images/         # Project screenshots
+│   ├── images/
 │   │   ├── vl.png      # Favicon
 │   │   └── *.webp      # Optimized project images
 │   └── fonts/          # Custom fonts
