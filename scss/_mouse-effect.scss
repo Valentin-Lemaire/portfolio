@@ -10,16 +10,14 @@
     background: var(--secondary-color);
     border-radius: 50%;
     position: fixed;
+    top: 0;
+    left: 0;
     pointer-events: none;
     z-index: 9999;
-    transition: transform 0.2s ease;
+    will-change: transform;
     transform: translate(-50%, -50%);
 
-    &.hover {
-        transform: translate(-50%, -50%) scale(2);
-    }
-
-    @include respond-to(medium) {
+    @media (pointer: coarse) {
         display: none;
     }
 }
@@ -30,16 +28,14 @@
     border: 1px solid var(--secondary-color);
     border-radius: 50%;
     position: fixed;
+    top: 0;
+    left: 0;
     pointer-events: none;
     z-index: 9999;
-    transition: transform 0.2s ease;
+    will-change: transform;
     transform: translate(-50%, -50%);
 
-    &.hover {
-        transform: translate(-50%, -50%);
-    }
-
-    @include respond-to(medium) {
+    @media (pointer: coarse) {
         display: none;
     }
 }
