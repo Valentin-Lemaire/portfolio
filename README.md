@@ -14,9 +14,10 @@ A modern, responsive portfolio website showcasing my projects, skills, and profe
 
 ```
 portfolio/
-├── index.html          # Main page
-├── scss/               # SCSS source files
-│   ├── style.scss      # Main SCSS file (imports all partials)
+├── index.html                    # Main page
+├── .gitignore                    # Git ignore rules
+├── scss/                         # SCSS source files
+│   ├── style.scss
 │   ├── _base.scss
 │   ├── _header.scss
 │   ├── _mixins.scss
@@ -27,28 +28,34 @@ portfolio/
 │   ├── _footer.scss
 │   ├── _fonts.scss
 │   └── _mouse-effect.scss
-├── css/                # Compiled CSS files
-│   ├── style.css       # Compiled main stylesheet
-│   └── style.css.map   # Source map for debugging
-├── js/                 # JavaScript modules
+├── css/                          # Compiled CSS files
+│   ├── style.css                 # Compiled main stylesheet
+│   └── style.css.map             # Source map for debugging
+├── js/                           # JavaScript modules
 │   ├── nav.js
 │   ├── typing-animation.js
 │   ├── three-background.js
 │   └── mouse-effect.js
-├── json/               # Translation files
+├── json/                         # Translation files
 │   ├── en.json
 │   └── fr.json
-├── static/             # Static assets
+├── static/                       # Static assets
 │   ├── images/
-│   │   ├── vl.png      # Favicon
-│   │   └── *.webp      # Optimized project images
-│   └── fonts/          # Custom fonts
-├── script.js           # Main script (translations, modals)
-├── footer.css          # Additional footer styles
-├── sitemap.xml         # SEO sitemap
-├── robots.txt          # Search engine crawler rules
-├── package.json        # Dependencies
-└── convert_to_webp.py  # Image optimization script
+│   │   ├── vl.png                # Favicon
+│   │   ├── vl.webp               # Optimized favicon
+│   │   ├── *.png                 # Original project images
+│   │   └── *.webp                # Optimized project images
+│   └── fonts/                    # Custom fonts
+│       ├── IBMPlexSans-*.woff2   # IBM Plex Sans font family
+│       └── SpaceGrotesk-*.woff2  # Space Grotesk font family
+├── node_modules/                 # Node.js dependencies
+├── script.js                     # Main script (translations, modals)
+├── sitemap.xml                   # SEO sitemap
+├── robots.txt                    # Search engine crawler rules
+├── package.json                  # Dependencies
+├── package-lock.json             # Dependency lock file
+├── CV Valentin Lemaire.pdf       # Resume/CV document
+└── convert_to_webp.py            # Image optimization script
 ```
 
 ## Getting Started
