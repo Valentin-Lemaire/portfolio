@@ -71,10 +71,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Click effect on follower ring
         document.addEventListener('mousedown', () => {
-            gsap.to(cursor2, { scale: prefersReducedMotion ? 1 : 0.5, duration: prefersReducedMotion ? 0 : 0.08, ease: 'power2.out' });
+            gsap.to(cursor2, { 
+                width: prefersReducedMotion ? '40px' : '20px', 
+                height: prefersReducedMotion ? '40px' : '20px', 
+                duration: prefersReducedMotion ? 0 : 0.08, 
+                ease: 'power2.out' 
+            });
         });
         document.addEventListener('mouseup', () => {
-            gsap.to(cursor2, { scale: 1, duration: prefersReducedMotion ? 0 : 0.16, ease: 'power2.out' });
+            gsap.to(cursor2, { 
+                width: '40px', 
+                height: '40px', 
+                duration: prefersReducedMotion ? 0 : 0.16, 
+                ease: 'power2.out' 
+            });
         });
 
         // Hover effect with overlap-safe counter
