@@ -15,7 +15,7 @@
         "title": "About Me",
         "bio": {
             "intro": "My name is Valentin Lemaire, I'm 19 years old, and I'm from Lyon, France.",
-            "education": "I'm in my first year of the engineering program at <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>ECE Lyon</a>, an engineering school specializing in <strong>computer science</strong>.",
+            "education": "I'm in my first year of the engineering program (3rd year of the bachelor's degree program) at <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>ECE Lyon</a>, an engineering school specializing in <strong>computer science</strong>.",
             "learning": "I started coding at home in 2021. Then in 2022 I chose the Digital and Computer Science (NSI) track in high school. (I scored 17 out of 20 on the NSI portion of the baccalaureate exam.) I then enrolled at the ECE in 2024."
         }
     },

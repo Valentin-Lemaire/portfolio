@@ -15,7 +15,7 @@
         "title": "À propos",
         "bio": {
             "intro": "Je m'appelle Valentin Lemaire, j'ai 19 ans, et je suis basé à Lyon.",
-            "education": "Je suis en première année de cycle ingénieur à <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>l'ECE Lyon</a>, une école d'ingénieur spécialisée dans le <strong>numérique</strong>.",
+            "education": "Je suis en première année de cycle ingénieur (3ème année du cycle licence) à <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>l'ECE Lyon</a>, une école d'ingénieur spécialisée dans le <strong>numérique</strong>.",
             "learning": "J'ai commencé à codé par moi-même en 2021. Puis, en 2022 j'ai choisi la spécialité Numérique et Sciences Informatiques (NSI) en première et je l'ai gardée en terminale. (17/20 à l'épreuve du bac de NSI). J'ai ensuite intégrée l'ECE en 2024."
         }
     },
