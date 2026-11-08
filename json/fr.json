@@ -14,48 +14,9 @@
     "about": {
         "title": "À propos",
         "bio": {
-            "intro": "Je m'appelle Valentin Lemaire, j'ai 18 ans, et je suis basé à Lyon.",
-            "education": "Je suis en 2e année de prépa intégrée <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>l'ECE Lyon</a>, une école d'ingénieur spécialisée dans le <strong>numérique</strong>.",
-            "learning": "J'ai commencé à codé par moi-même en 2021, et j'ai appris la plupart de mes compétences techniques de manière autonome. Les seules exceptions sont Python, que j'ai étudié en terminale, et la programmation bas-niveau (C), que j'ai appris en première année de prépa intégrée. Mes compétences en développement web sont entièrement autodidactes.",
-            "experience": "Apprendre à coder a été un défi mais ça en valait la peine. Je sais que l'apprentissage dans le domaine de l'ingénierie ne cesse jamais, avec la technologie qui évolue constamment. Cependant, grâce à cette expérience, j'ai développé des compétences précieuses pour un ingénieur : la capacité à <strong>apprendre de manière autonome</strong> et à <strong>résoudre des problèmes</strong> efficacement. En parlant de compétences autodidactes, je suis devenu assez bon en <strong>vulgarisation</strong> de sujets complexes ce qui est, selon moi, une compétence importante pour un ingénieur lorsqu'il travaille avec des personnes non techniques.",
-            "interests": "Par ailleurs, pour partager un peu plus sur mes intérêts et mes passions, j'ai un fort intérêt pour la science et la technologie. Mes deux domaines préférés sont <strong>l'informatique</strong> et <strong>l'aérospatiale</strong>, c'est pourquoi je suis vraiment ravi d'être en école d'ingénieur, c'est quelque chose qui me plait vraiment."
-        },
-        "skills": {
-            "programming": {
-                "title": "Programmation",
-                "python": "J'ai appris Python en terminale et je l'ai utilisé pour de nombreux projets depuis.",
-                "c": "J'ai appris C en première année de prépa intégrée.",
-                "c++": "J'ai appris C++ en première année de prépa intégrée.",
-                "javascript": "J'ai appris JavaScript par moi-même et je l'ai utilisé dans de nombreux projets. J'ai également appris les bases de Three.js, une bibliothèque pour faire des graphiques 3D.",
-                "OOP": "J'ai appris les bases de la programmation orientée objet en Python pour les utiliser dans des projets de taille moyenne.",
-                "CLI": "J'ai appris les bases de l'interface de ligne de commande pour l'utiliser sur macOS puisque je suis un utilisateur Mac."
-            },
-            "web": {    
-                "title": "Développement Web",
-                "htmlcss": "J'ai appris HTML5 et CSS3 par moi-même et j'ai progressé au fil du temps en faisant de nombreux projets personnels.",
-                "SEO": {
-                    "title": "SEO",
-                    "description": "J'ai appris les bases de la SEO pour rendre mon portfolio plus visible sur les moteurs de recherche."
-                },
-                "responsiveDesign": {
-                    "title": "Design Responsive",
-                    "description": "J'ai appris le design responsive pour rendre mes sites web plus accessibles sur tous les appareils."
-                },
-                "webAccessibility": {
-                    "title": "Accessibilité Web",
-                    "description": "J'ai appris l'accessibilité web pour rendre mes sites web plus accessibles à tous."
-                },
-                "performanceOptimization": {
-                    "title": "Optimisation de Performance",
-                    "description": "J'ai appris l'optimisation de performance pour rendre mon portfolio plus efficace et plus rapide."
-                }
-            },
-            "tools": {
-                "title": "Outils & Technologies",
-                "git": "J'utilise Git et GitHub depuis peu, mais je commence à m'y faire.",
-                "vercel": "J'utilise Vercel pour déployer la plupart de mes projets web, comme ce portfolio.",
-                "IDE": "J'utilise VSCode et d'autres IDEs pour coder mes projets."
-            }
+            "intro": "Je m'appelle Valentin Lemaire, j'ai 19 ans, et je suis basé à Lyon.",
+            "education": "Je suis en première année de cycle ingénieur à <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>l'ECE Lyon</a>, une école d'ingénieur spécialisée dans le <strong>numérique</strong>.",
+            "learning": "J'ai commencé à codé par moi-même en 2021. Puis, en 2022 j'ai choisi la spécialité Numérique et Sciences Informatiques (NSI) en première et je l'ai gardée en terminale. (17/20 à l'épreuve du bac de NSI). J'ai ensuite intégrée l'ECE en 2024."
         }
     },
     "projects": {
@@ -73,17 +34,9 @@
             "title": "Simulation de Double Pendule",
             "description": "J'ai codé une simulation de double pendule en utilisant Python et Matplotlib."
         },
-        "boids": {
-            "title": "Simulation de Boids",
-            "description": "J'ai codé une simulation de Boids en utilisant JavaScript et HTML5 Canvas."
-        },
         "asteroids": {
             "title": "Asteroids",
             "description": "J'ai recodé le jeu d'arcade \"Asteroids\" en utilisant Python et Pygame."
-        },
-        "starTrailSimulation": {
-            "title": "Simulation de Traînée d'Étoile",
-            "description": "J'ai codé une simulation de traînée d'étoile en utilisant JavaScript et HTML5 Canvas."
         },
         "2DGame": {
             "title": "Jeu 2D",
@@ -125,15 +78,6 @@
                 "Observez les motifs de mouvement chaotique"
             ]
         },
-        "boids": {
-            "title": "Simulation de Boids",
-            "description": "Une implémentation de l'algorithme <a href='http://www.red3d.com/cwr/boids/' target='_blank' rel='noopener noreferrer'>Boids de Craig Reynolds</a>, simulant le comportement de vol des oiseaux. La simulation démontre un comportement émergent à partir de règles simples.",
-            "howToUse": [
-                "Ouvrez la démo en direct dans votre navigateur web",
-                "Regardez les boids se regrouper naturellement",
-                "Ajustez les paramètres de regroupement en utilisant les contrôles"
-            ]
-        },
         "asteroids": {
             "title": "Jeu Asteroids",
             "description": "Une reprise du jeu d'arcade Asteroids. Ce projet était un projet que j'ai fait en terminale pour apprendre la programmation orientée objet en Python. (Le code n'est pas très propre, mais ça marche et je ne vois aucune raison de le nettoyer.)",
@@ -144,16 +88,6 @@
                 "Appuyez sur la barre d'espace pour tirer sur les astéroïdes",
                 "Essayez d'atteindre le meilleur score",
                 "La difficulté augmente au fur et à mesure que vous avancez"
-            ]
-        },
-        "starTrailSimulation": {
-            "title": "Simulation de Traînée d'Étoile",
-            "description": "J'ai une fois vu une photo de traînée d'étoile et ça m'a interessé. J'ai fait des recherches et j'ai appris que c'était fait par les étoiles qui se déplacent dans le ciel (grâce à la rotation de la Terre) capturées avec une longue exposition. J'ai pensé que c'était une bonne idée et assez facile à reproduire en simulation web.",
-            "howToUse": [
-                "Ouvrez la démo en direct dans votre navigateur web",
-                "Regardez les étoiles se déplacer dans le ciel",
-                "Sur ordinateur, vous pouvez utiliser la molette de la souris pour changer la vitesse de la simulation",
-                "En actualisant la page, vous pouvez changer la latitude de la caméra simulée"
             ]
         },
         "2DGame": {

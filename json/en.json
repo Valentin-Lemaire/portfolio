@@ -14,48 +14,9 @@
     "about": {
         "title": "About Me",
         "bio": {
-            "intro": "My name is Valentin Lemaire, I'm 18 years old, and I'm from Lyon, France.",
-            "education": "I'm a second-year engineering student at <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>ECE Lyon</a>, specializing in <strong>computer science</strong>.",
-            "learning": "I started coding at home in 2021, learning most of my technical skills independently. The only exceptions are Python, which I studied during my final year of high school, and low-level programming (C), which I learned in my first year of engineering. My front-end web development skills are entirely self-taught.",
-            "experience": "Teaching myself to code has been both a challenge and a rewarding journey. I know that learning in the field of engineering never truly stops, as technology constantly evolves. However, through this experience, I've developed valuable skills for an engineer to have: the ability to <strong>learn independently</strong> and <strong>problem-solving skills</strong>. Speaking of self-taught skills, I've become great at <strong>popularization</strong> concerning complex subjects which is, in my opinion, an important skill for an engineer to have when working with non-technical people.",
-            "interests": "By the way, to share a bit more about my interests and passions, I have a strong interest in science and technology. My two favorite fields are <strong>computer science</strong> and <strong>aerospace</strong>, that's why I'm truly glad to be studying engineering, it's something I'm genuinely passionate about."
-        },
-        "skills": {
-            "programming": {
-                "title": "Programming",
-                "python": "I've learned Python in my last year of High School and I've used it for many projects since then.",
-                "c": "I've learned C in my first year of engineering.",
-                "c++": "I've learned C++ in my first year of engineering.",
-                "javascript": "I've learned some JavaScript by myself and have used it in various projects. I've also learned the basics of Three.js which is a library to make 3D graphics.",
-                "OOP": "I've learned the basics of Object Oriented Programming in Python to use it in medium-sized projects.",
-                "CLI": "I've learned the basics of the command line interface to use it on macOS since I'm a Mac user."
-            },
-            "web": {
-                "title": "Web Development",
-                "htmlcss": "I've learned HTML5 and CSS3 by myself and I've improved over time by doing lots of personal projects.",
-                "SEO": {
-                    "title": "SEO",
-                    "description": "I've learned the basics of SEO to make my portfolio more visible on search engines."
-                },
-                "responsiveDesign": {
-                    "title": "Responsive Design",
-                    "description": "I've learned responsive design to make my websites more accessible on all devices."
-                },
-                "webAccessibility": {
-                    "title": "Web Accessibility",
-                    "description": "I've learned web accessibility to make my websites more accessible to everyone."
-                },
-                "performanceOptimization": {
-                    "title": "Performance Optimization",
-                    "description": "I've learned performance optimization to make my portfolio more efficient and faster."
-                }
-            },
-            "tools": {
-                "title": "Tools & Technologies",
-                "git": "I've only recently started using Git and GitHub but I'm getting the hang of it.",
-                "vercel": "I've used Vercel to deploy most of my web projects including this portfolio.",
-                "IDE": "I've used VSCode and many other IDEs to code my projects."
-            }
+            "intro": "My name is Valentin Lemaire, I'm 19 years old, and I'm from Lyon, France.",
+            "education": "I'm in my first year of the engineering program at <a href='https://www.ece.fr/' target='_blank' rel='noopener noreferrer'>ECE Lyon</a>, an engineering school specializing in <strong>computer science</strong>.",
+            "learning": "I started coding at home in 2021. Then in 2022 I chose the Digital and Computer Science (NSI) track in high school. (I scored 17 out of 20 on the NSI portion of the baccalaureate exam.) I then enrolled at the ECE in 2024."
         }
     },
     "projects": {
@@ -73,17 +34,9 @@
             "title": "Double Pendulum Simulation",
             "description": "I made a simple double pendulum simulation using Python and Matplotlib."
         },
-        "boids": {
-            "title": "Boids Simulation",
-            "description": "I made a minimalistic boids simulation using JavaScript and HTML5 Canvas."
-        },
         "asteroids": {
             "title": "Asteroids",
             "description": "I re-made the famous arcade game \"Asteroids\" using Python and Pygame."
-        },
-        "starTrailSimulation": {
-            "title": "Star Trail Simulation",
-            "description": "I made a star trail simulation using JavaScript and HTML5 Canvas."
         },
         "2DGame": {
             "title": "2D Game",
@@ -125,15 +78,6 @@
                 "Observe the chaotic motion patterns"
             ]
         },
-        "boids": {
-            "title": "Boids Simulation",
-            "description": "An implementation of <a href='http://www.red3d.com/cwr/boids/' target='_blank' rel='noopener noreferrer'>Craig Reynolds' Boids algorithm</a>, simulating flocking behavior in birds. The simulation demonstrates emergent behavior from simple rules.",
-            "howToUse": [
-                "Open the live demo in your web browser",
-                "Watch the boids flock naturally",
-                "Adjust flocking parameters using the controls"
-            ]
-        },
         "asteroids": {
             "title": "Asteroids Game",
             "description": "A recreation of the classic arcade game Asteroids. This project was a project I made in High School to learn Object Oriented Programming in Python. (The code is a bit messy, but it works and I don't see any reason to clean it up.)",
@@ -144,16 +88,6 @@
                 "Spacebar to shoot asteroids",
                 "Try to achieve the highest score",
                 "Difficulty increases as you progress"
-            ]
-        },
-        "starTrailSimulation": {
-            "title": "Star Trail Simulation",
-            "description": "I once saw a star trail photography and got interested by it. I did some research and learned that it was made by the stars moving in the sky (due to the rotation of the earth) captured with a long exposure. I thought it would be a good idea and quite easy to make a web simulation of it.",
-            "howToUse": [
-                "Open the live demo in your web browser",
-                "Watch the stars move across the sky",
-                "On desktop you can scroll to change the speed of the simulation",
-                "By refreshing the page you can change the latitude of the simulated camera"
             ]
         },
         "2DGame": {
